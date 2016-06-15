@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    {% include head.html %}
+</head>
+
+<body class="full-intro">
+    <!-- Intro Section -->
+    <section class="inner-intro {{page.image}} overlay-light parallax parallax-section1">
+        <div class="container">
+            <div class="row title">
+                <h2 class="h2">{{page.title}}</h2>
+                <div class="page-breadcrumb">
+                    <a href="/">Accueil</a>/<a href="{{site.baseurl}}/blog">Blog</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div class="clearfix"></div>
+    <!-- End Intro Section -->
+    <!-- Blog Post Section -->
+    <section class="ptb ptb-sm-80">
+        <div class="container">
+            <div class="row">
+                <!-- Post Bar -->
+                <div class="col-lg-9 col-md-9 blog-post-hr">
+                    <div class="blog-post mb-30">
+                        <!--<div class="post-header">
+                            <h2><a href="{{page.url}}">{{page.title}}</a></h2>
+                        </div>
+                        <div class="post-meta">
+                        	<span>by <a>{{ page.author }}</a>,</span>
+                        	<span>{{ page.date | date_to_long_string}}</span>
+                        </div>-->
+                        <!--<div class="post-media">
+                            <img alt="" src="/img/full/28.jpg">
+                        </div>-->
+                        <div class="post-entry">
+                            {{content}}
+                        </div>                      
+                    </div>
+                    <hr />
+                    <div class="post-author">
+                        <div class="post-author-img pull-left">
+                            <img alt="author" src="{{site.baseurl}}/img/JeremieGrodziski-portrait.png">
+                        </div>
+
+                        <div class="post-author-details pull-left">
+                            <h6>{{ page.author }}</h6>
+                            <ul class="social">
+                                <li><a href="https://www.twitter.com/jgrodziski" target="_blank"><i class="fa fa-twitter"></i></a></li>
+                                <li><a href="https://github.com/jgrodziski" target="_blank"><i class="fa fa-github"></i></a></li>
+                                <li><a href="https://news.ycombinator.com/user?id=jgrodziski" target="_blank"><i class="fa fa-y-combinator"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <hr />
+                    <div class="clearfix"></div>
+                    <div id="disqus_thread"></div>
+						<script>
+						    var disqus_config = function () {
+						        this.page.url = {{page.url}};
+						        this.page.identifier = {{page.id}};
+						    };
+
+						   (function() {
+								var d = document, s = d.createElement('script');
+
+								s.src = '//ddd-eu.disqus.com/embed.js';
+
+								s.setAttribute('data-timestamp', +new Date());
+								(d.head || d.body).appendChild(s);
+								})();
+						</script>
+						<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+                	</div>
+                <!-- End Post Bar -->
+                <!-- Sidebar -->
+                <div class="col-lg-3 col-md-3 mt-sm-30">
+                    <div class="sidebar-widget">
+                        <h5>Search</h5>
+                        <div class="widget-search">
+                            <input class="form-full input-lg" type="text" value="" placeholder="Search Here" name="search" id="wid-search">
+                            <input type="submit" value="" name="email" id="wid-s-sub">
+                        </div>
+                    </div>
+                    <div class="sidebar-widget">
+                        <h5>Recent</h5>
+                        <hr>
+                        <ul class="widget-post">
+                        	{% for post in site.posts :limit 5%}
+                            	<li>
+                                	<div class="widget-post-info">
+                                    	<h6><a href="{{post.url}}">{{post.title}}</a></h6>
+                                    	<div class="post-meta"><span>{{ post.date | date_to_long_string}}</span></div>
+                                	</div>
+                            	</li>
+                           {% endfor %}
+                        </ul>
+                    </div>
+                    <div class="sidebar-widget">
+                        <h5>Tags</h5>
+                        <hr>
+	                     {% tag_cloud %}
+                    </div>
+                </div>
+                <!-- End Sidebar -->
+            </div>
+        </div>
+    </section>
+    <!-- End Blog Post Section -->
+    {% include footer.html %}
+</body>
+
+</html>

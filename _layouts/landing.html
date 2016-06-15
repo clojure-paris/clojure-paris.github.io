@@ -1,0 +1,75 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+   {% include head.html %}
+</head>
+
+<body class="full-intro">
+    {% include header.html %}
+    {{page.content}}
+
+    <!-- Blog Section -->
+        <section id="blog " class="wow fadeIn ptb ptb-sm-80 ">
+            <div class="container ">
+                <h2 class="float-left float-none-xs ">Blog</h2>
+                <a class="btn-link-a float-right float-none-xs " href="/blog">Voir Tout</a>
+                <div class="clearfix "></div>
+                <div class="spacer-60 "></div>
+                <div class="row ">
+
+                {% for post in site.posts limit:3 %}
+                    <div class="col-lg-4 col-md-6 col-sm-6 mb-sm-30 ">
+                        <div class="blog-post ">
+                            <div class="post-header ">
+                                <h5><a href="{{ post.url }}">{{ post.title }}</a></h5>
+                            </div>
+                            <div class="post-meta "><!--<span><a>{{ post.author }}</a>,</span>--><span>{{ post.date | date_to_long_string}}</span></div>
+                        </div>
+                    </div>
+                {% endfor %}
+
+                 <!-- Pagination Nav -->
+                {% if paginator.total_pages > 1 %}
+                    <div class="pagination-nav mt-60 mtb-xs-30">
+                        <ul>
+                            {% if paginator.previous_page %}
+                              <li><a href="{{ paginator.previous_page_path }}"><i class="fa fa-angle-left"></i></a></li>
+                            {% else %}
+                              <li><i class="fa fa-angle-left"></i></li>
+                            {% endif %}
+
+                            {% for page in (1..paginator.total_pages) %}
+                              {% if page == paginator.page %}
+                                <li class="active"><a>{{ page }}</a></li>
+                                <em>{{ page }}</em>
+                              {% elsif page == 1 %}
+                                <li><a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">{{ page }}</a></li>
+                              {% else %}
+                                <li><a href="{{ site.paginate_path | prepend: site.baseurl | replace: '//', '/' | replace: ':num', page }}">{{ page }}</a></li>
+                              {% endif %}
+                            {% endfor %}
+
+                            {% if paginator.next_page %}
+                              <li><a href="{{ paginator.next_page_path }}"><i class="fa fa-angle-right"></i></a></li>
+                            {% else %}
+                              <li><i class="fa fa-angle-right"></i></li>
+                            {% endif %}
+                        </ul>
+                    </div>
+                {% endif %}
+                <!-- End Pagination Nav -->
+
+                </div>
+            </div>
+        </section>
+        <!-- End Blog Section -->
+
+    {% include footer.html %}
+
+
+    {% include js.html %}
+
+
+</body>
+</html>
