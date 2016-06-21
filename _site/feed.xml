@@ -6,9 +6,9 @@
 </description>
     <link>http://domain-driven-design.eu/</link>
     <atom:link href="http://domain-driven-design.eu/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Thu, 14 Apr 2016 21:24:05 +0200</pubDate>
-    <lastBuildDate>Thu, 14 Apr 2016 21:24:05 +0200</lastBuildDate>
-    <generator>Jekyll v3.1.1</generator>
+    <pubDate>Fri, 17 Jun 2016 16:37:23 +0200</pubDate>
+    <lastBuildDate>Fri, 17 Jun 2016 16:37:23 +0200</lastBuildDate>
+    <generator>Jekyll v3.1.2</generator>
     
       <item>
         <title>Domain Driven Design Value Type</title>
@@ -260,90 +260,6 @@ et comme opérations :&lt;/li&gt;
         <category>DDD</category>
         
         <category>bibliography</category>
-        
-        
-        <category>software-design</category>
-        
-      </item>
-    
-      <item>
-        <title>Introduction au Domain Driven Design &lt;br/&gt;- &lt;em&gt;Entity&lt;/em&gt; et &lt;em&gt;Value Object&lt;/em&gt; -</title>
-        <description>&lt;p&gt;The slides from &lt;a href=&quot;http://www.meetup.com/DDD-Paris/events/103367252/&quot;&gt;My DDD Paris User Group talk&lt;/a&gt; hosted by &lt;a href=&quot;http://www.xebia.fr&quot;&gt;Xebia&lt;/a&gt;&lt;/p&gt;
-
-&lt;script class=&quot;speakerdeck-embed&quot; data-id=&quot;818f836073990130104b1231392da109&quot; data-ratio=&quot;1.33333333333333&quot; src=&quot;http://speakerdeck.com/assets/embed.js&quot;&gt; &lt;/script&gt;
-
-&lt;p&gt;And here are the links towards the 3 videos in french:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;a href=&quot;http://blog.xebia.fr/2013/03/11/une-vue-densemble-du-ddd-par-jeremie-grodziski/&quot;&gt;Part 1: DDD overview&lt;/a&gt;&lt;/p&gt;
-
-    &lt;iframe width=&quot;370&quot; height=&quot;370&quot; src=&quot;http://player.vimeo.com/video/60720509&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;allowfullscreen&quot;&gt; unwantedtext &lt;/iframe&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;a href=&quot;http://blog.xebia.fr/2013/03/15/le-value-object-et-lentity-du-ddd/&quot;&gt;Part 2 : Entity and Value Object&lt;/a&gt;&lt;/p&gt;
-
-    &lt;iframe width=&quot;370&quot; height=&quot;370&quot; src=&quot;http://player.vimeo.com/video/60800262&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;allowfullscreen&quot;&gt; unwantedtext &lt;/iframe&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;a href=&quot;http://blog.xebia.fr/2013/03/15/lien-entre-le-fonctionnel-lobjet-et-le-ddd/&quot;&gt;Part 3 : State and the Functional Paradigm&lt;/a&gt;&lt;/p&gt;
-
-    &lt;iframe width=&quot;370&quot; height=&quot;370&quot; src=&quot;http://player.vimeo.com/video/60802762&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;allowfullscreen&quot;&gt; unwantedtext &lt;/iframe&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;some-links-ive-referred-to-during-my-talk&quot;&gt;Some links I’ve referred to during my talk&lt;/h2&gt;
-
-&lt;h3 id=&quot;about-oo-and-fp-design&quot;&gt;About OO and FP Design&lt;/h3&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;http://www.objectmentor.com/resources/articles/CoffeeMaker.pdf&quot;&gt;Bob Martin’s Coffee Maker design&lt;/a&gt;. A great article about the pitfalls of sticking too much to only the objects of the real world and not taking account of the user interface to the system in a design.&lt;/li&gt;
-  &lt;li&gt;Rich Hickey &lt;a href=&quot;http://clojure.org/state&quot;&gt;wrote very clearly about State and Identity&lt;/a&gt; in the rationale behind the design of Clojure. A must read for me and very enligthning article!&lt;/li&gt;
-  &lt;li&gt;I also humbly wrote myself about &lt;a href=&quot;http://blog.zenmodeler.com/software-design/2012/01/28/identity-data-and-state-the-fundamentals-of-object-and-functional-design-and-how-to-manage-them.html&quot;&gt;Identy, Data and State&lt;/a&gt; some time ago&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http://www.artima.com/articles/dci_vision.html&quot;&gt;DCI architecture: a new vision of object-oriented programming&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;ddd-distillation&quot;&gt;DDD distillation&lt;/h3&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;http://blog.zenmodeler.com/domain-driven-design-distillation-support-generic-and-core-domain/index.html&quot;&gt;Domain Driven Design Distillation: Support, Generic and Core Domain&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;bounded-context&quot;&gt;Bounded Context&lt;/h3&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;http://www.infoq.com/articles/ddd-contextmapping&quot;&gt;Strategic Domain Driven Design with Context Mapping&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http://www.infoq.com/news/2013/02/ddd-bounded-context-large-domain&quot;&gt;Using the Domain Driven Design Bounded Context Concept to Shrink a Large Domain Model&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;books-about-ddd-free-and-not-free&quot;&gt;Books about DDD (free and not free)&lt;/h3&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;a href=&quot;http://www.infoq.com/minibooks/domain-driven-design-quickly&quot;&gt;Domain Driven Design Quickly. Infoq (Free!)&lt;/a&gt;&lt;/p&gt;
-
-    &lt;ul&gt;
-      &lt;li&gt;There is also a &lt;a href=&quot;http://blog.infosaurus.fr/public/docs/DDDViteFait.pdf&quot;&gt;french translation “DDD Vite Fait”&lt;/a&gt; written by &lt;a href=&quot;https://twitter.com/infosaurus&quot;&gt;Guillaume Lebur&lt;/a&gt;.&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http://domain-driven-design.eu/download/Domain_Driven_Design_-_Step_by_Step.pdf&quot;&gt;Domain Driven Design Step by Step (Free!)&lt;/a&gt; (I provide the file as the author’s website seems to be down when I wrote this)&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http://www.amazon.com/gp/product/0321125215/ref=as_li_tf_tl?ie=UTF8&amp;amp;tag=wwwgrodziskic-21&amp;amp;linkCode=as2&amp;amp;camp=1642&amp;amp;creative=6746&amp;amp;creativeASIN=0321125215&quot;&gt;Domain-Driven Design. Tackling complexity in the Hearth of Software. Eric Evans.&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http://www.amazon.com/gp/product/1934356441/ref=as_li_tf_tl?ie=UTF8&amp;amp;tag=wwwgrodziskic-21&amp;amp;linkCode=as2&amp;amp;camp=1642&amp;amp;creative=6746&amp;amp;creativeASIN=1934356441&quot;&gt;Domain Driven Design Using Naked Objects. Dan Haywood&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http://www.amazon.com/Implementing-Domain-Driven-Design-Vaughn-Vernon/dp/0321834577&quot;&gt;Implementing Domain-Driven Design. Vaughn Vernon&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-</description>
-        <pubDate>Wed, 20 Jan 2016 00:00:00 +0100</pubDate>
-        <link>http://domain-driven-design.eu/software-design/2016/01/20/introduction-to-domain-driven-design-entity-and-value-object.html</link>
-        <guid isPermaLink="true">http://domain-driven-design.eu/software-design/2016/01/20/introduction-to-domain-driven-design-entity-and-value-object.html</guid>
-        
-        <category>domain-driven-design</category>
-        
-        <category>DDD</category>
-        
-        <category>entity</category>
-        
-        <category>value object</category>
         
         
         <category>software-design</category>
