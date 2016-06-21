@@ -14,15 +14,26 @@ dl, dd, ol, ul, figure {
  * Basic styling
  */
 body {
-    font: $base-font-weight #{$base-font-size}/#{$base-line-height} $base-font-family;
-    color: $text-color;
-    background-color: $background-color;
+    //font: $base-font-weight #{$base-font-size}/#{$base-line-height} $base-font-family;
+    //color: $text-color;
+    background-color: $white;
     -webkit-text-size-adjust: 100%;
     -webkit-font-feature-settings: "kern" 1;
     -moz-font-feature-settings: "kern" 1;
     -o-font-feature-settings: "kern" 1;
     font-feature-settings: "kern" 1;
     font-kerning: normal;
+}
+
+@keyframes body-in {
+    0% {
+        opacity: 0;
+        //transform: translateY(200px);
+    }
+    100% {
+        opacity: 1;
+        //transform: translateY(0px);
+    }
 }
 
 
@@ -89,7 +100,7 @@ h1, h2, h3, h4, h5, h6 {
 
 /**
  * Links
- */
+
 a {
     color: $brand-color;
     text-decoration: none;
@@ -103,7 +114,7 @@ a {
         text-decoration: underline;
     }
 }
-
+*/
 
 
 /**
@@ -121,35 +132,6 @@ blockquote {
         margin-bottom: 0;
     }
 }
-
-
-
-/**
- * Code formatting
- */
-pre,
-code {
-    font-size: 15px;
-    border: 1px solid $grey-color-light;
-    border-radius: 3px;
-    background-color: #eef;
-}
-
-code {
-    padding: 1px 5px;
-}
-
-pre {
-    padding: 8px 12px;
-    overflow-x: auto;
-
-    > code {
-        border: 0;
-        padding-right: 0;
-        padding-left: 0;
-    }
-}
-
 
 
 /**

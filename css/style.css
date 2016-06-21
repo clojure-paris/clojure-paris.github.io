@@ -8,15 +8,15 @@
 @import url(https://fonts.googleapis.com/css?family=Droid+Serif:400,600,800);
 
 
-/* 
+/*
 * BASIC STYLE
-  - General Style    
-  - Headings Style    
-  - Button Style    
-  - Form Style    
+  - General Style
+  - Headings Style
+  - Button Style
+  - Form Style
   - Spacer Style
-      
-* HEADER 
+
+* HEADER
   - Header Style
   - Navigation Menu
   - Right Side Menu Button (Search, Cart, Bar, etc)
@@ -34,7 +34,7 @@
   - Client Logo
   - Icon
   - Table
-  
+
 * GLOBAL STYLES
   - Push Menu Style (Top, Bottom, Left, right)
   - Contents (Body, Container, Section, etc)
@@ -90,7 +90,7 @@ img {
 }
 
 a, a:focus, a:active, a:link, img {
-   
+
 }
 
 a {
@@ -2057,7 +2057,7 @@ header.sticky .navigation a.current-ele {
 
     .side-menu .social {
         list-style:none;
-       
+
     }
         .side-menu .social li {
             display:inline-block;

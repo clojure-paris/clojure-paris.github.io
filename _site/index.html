@@ -13,14 +13,11 @@
  <link href="/img/favicon.ico" rel="shortcut icon" type="image/x-icon"/>
  <link href="/img/favicon.png" rel="icon" type="image/png"/>
  <link href="/img/favicon.png" rel="apple-touch-icon"/>
- <link href="/css/style.css" rel="stylesheet" type="text/css" />
- <link href="/css/bootstrap.css" rel="stylesheet" type="text/css" />
- <link href="/css/font-awesome.css" rel="stylesheet" type="text/css" />
- <link href="/css/ionicons.css" rel="stylesheet" type="text/css" />
- <link href="/css/plugin/jPushMenu.css" rel="stylesheet" type="text/css" />
- <link href="/css/plugin/animate.css" rel="stylesheet" type="text/css" />
- <link href="/css/jquery-ui.css" rel="stylesheet" type="text/css" />
- <link href="/css/custom.css" rel="stylesheet" type="text/css" />
+ <!--link href="/css/style.css" rel="stylesheet" type="text/css" /-->
+ <!--link href="/css/plugin/animate.css" rel="stylesheet" type="text/css" /-->
+ <!--link href="/css/custom.css" rel="stylesheet" type="text/css" /-->
+ <link href="/css/main.css" rel="stylesheet" type="text/css" />
+
 </head>
 
 <body class="full-intro">
@@ -32,7 +29,7 @@
     </section>-->
     <!-- End Preloader -->
     <!-- Search menu Top -->
-    <section class=" top-search-bar cbp-spmenu cbp-spmenu-horizontal cbp-spmenu-top">
+    <!--section class=" top-search-bar cbp-spmenu cbp-spmenu-horizontal cbp-spmenu-top">
         <div class="container">
             <div class="search-wraper">
                 <input type="text" class="input-sm form-full" placeholder="Search..." name="search" />
@@ -40,480 +37,99 @@
                 <a class="bar-close toggle-menu menu-top push-body"><i class="ion ion-android-close"></i></a>
             </div>
         </div>
-    </section>
+    </section-->
     <!--End Search menu Top -->
     <!-- Site Wraper -->
-    <div class="wrapper">
+
         <!-- HEADER -->
-        <header class="header">
-            <div class="container">
-                <!-- Rightside Menu (Search, Cart, Bart icon) -->
-                <div class="side-menu-btn">
-                    <ul>
-                        <!-- Search Icon -->
-                        <li class="">
-                            <a class="right-icon search toggle-menu menu-top push-body"><i class="fa fa-search"></i></a>
-                        </li>
-                        <!-- End Search Icon -->
-                    </ul>
-                </div>
-                <!-- End Rightside Menu -->
-                <!-- Navigation Menu -->
-                <nav class='navigation'>
-                    <ul>
-                        <li>
-                            <a href="/">Accueil</a>
-                        </li>
-                        <li>
-                            <a href="/#presentation">Présentation</a>
-                        </li>
-                        <li>
-                            <a href="/#contenu">Contenu</a>
-                        </li>
-                        <li>
-                            <a href="/#pricing">Dates & Tarifs</a>
-                        </li>
-                        <li>
-                            <a href="/#formateur">Formateur</a>
-                        </li>
-                        <li>
-                            <a href="/blog">Blog</a>
-                        </li>
-                    </ul>
-                </nav>
-                <!--End Navigation Menu -->
+        <header class="shiny-header">
+            <div class="logo">
+                <a href="/"><img class="illu" src="/img/logos/paris-clojure.svg"/><img class="typo" src="/img/logos/paris-clojure-type.svg"/></a>
             </div>
+            <nav>
+                <a href="/#presentation">Présentation</a>
+                <a href="/#dates">Dates</a>
+                <a href="/#blog">Blog</a>
+                <a href="/#contact">Contact</a>
+            </nav>
+                <!--End Navigation Menu -->
         </header>
         <!-- END HEADER -->
-    <!-- Intro Section -->
-        <section class="home-slider">
-            <!-- Hero Slider Section -->
-            <div class="owl-carousel fullwidth-slider o-flow-hidden">
-                <div class="item bg-img parallax parallax-section1" style="background-image: url('img/craft-fig.jpg');">
-                    <!-- Content -->
-                    <div class="full-cap-wraper overlay-dark20 light-color">
-                        <div class="content-caption light-color">
-                            <div class="container">
-                                <h1 class="h1">Formation
-                                <br/>
-                                <br/>
-                                Domain-Driven Design
-                                </h1>
-                                <br/>
-                                <br/>
-                                <div><a class="btn btn-md btn-white xs-hidden" href="/#presentation">En Savoir Plus</a><span class="btn-space-10 xs-hidden"></span><a class="btn btn-md btn-white" href="/inscription">S'inscrire</a></div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- End Content -->
-                </div>
+
+            <!-- Cover Section -->
+        <section class="home-cover clearfix">
+            <div class="cover-rellax-scene">
+                <img class="rellax cover-bracket-purple" data-rellax-speed="-2" src="/img/bracket-purple.svg"/>
+                <img class="rellax cover-parenthese-blue" data-rellax-speed="-3" src="/img/parenthese-blue.svg"/>
+                <img class="rellax cover-hexagone-green" data-rellax-speed="2" src="/img/hexagone-green.svg"/>
+                <img class="rellax cover-hexagone-lightblue" data-rellax-speed="-6" src="/img/hexagone-lightblue.svg"/>
+                <img class="rellax cover-parenthese-green" data-rellax-speed="6" src="/img/parenthese-green.svg"/>
+                <img class="rellax cover-colon-purple" data-rellax-speed="10" src="/img/colon-purple.svg"/>
+                <img class="rellax cover-circle-darkblue" data-rellax-speed="10" src="/img/circle-darkblue.svg"/>
             </div>
-            <!-- End Hero Slider Section -->
+            <div id="parallax-scene" class="parallax-container">
+                <img class="layer" data-depth="0.75" src="/img/cover-back.svg"/>
+                <img class="layer" data-depth="1" src="/img/cover-middle.svg"/>
+                <img class="layer" data-depth="1.5" src="/img/cover-front-1.svg"/>
+            </div>
         </section>
         <div class="clearfix"></div>
-        <!-- End Intro Section -->
-        <!--presentation Section-->
-        <section id="presentation" class="wow fadeIn ptb ptb-sm-40">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-8 col-md-offset-2 text-center">
-                        <h2>Présentation de la Formation</h2>
-                        <div class="spacer-15"></div>
-                        <p class="">Un logiciel doit être au service d’un domaine métier. <strong>L’objectif du Domain Driven Design (DDD) est de créer de meilleurs logiciels plus facilement en se concentrant sur le domaine métier plutôt que la technologie. </strong>
-                        </p>
-                        <p class="">
-                            Un logiciel est adapté à son domaine lorsque sa capacité à traiter des problèmes liés au domaine est bonne. <strong>Le DDD est une approche et des techniques de conception pour gérer la complexité du domaine et aligner le logiciel sur les concepts métiers qu'il manipule.</strong>
-                        </p>
-                        <p class="">
-                            <strong>Cette formation vous apprend les fondamentaux du DDD et sa mise en oeuvre pratique et concrète dans vos logiciels.</strong>
-                        </p>
-                    </div>
+        <!-- End Cover Section -->
+        <!-- Presentation Section -->
+        <section id="presentation" class="presentation clearfix">
+            <div class="presentation-rellax-scene">
+                <img class="rellax pres-quote-purple" data-rellax-speed="6" src="/img/quote-purple.svg"/>
+                <img class="rellax pres-hexagone-lightpurple" data-rellax-speed="2" src="/img/hexagone-lightpurple.svg"/>
+                <img class="rellax pres-colon-lightgreen" data-rellax-speed="-4" src="/img/colon-lightgreen.svg"/>
+                <img class="rellax pres-bracket-lightblue" data-rellax-speed="10" src="/img/bracket-lightblue.svg"/>
+            </div>
+            <div class="line-wrapper clearfix">
+                <div class="container">
+                    <h1>Paris Clojure Meetup</h1>
+                    <div class="text-space"></div>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        In porttitor feugiat tincidunt. Phasellus cursus aliquam
+                        pharetra. Cras malesuada, augue et volutpat dictum, tortor
+                        massa accumsan massa, accumsan tristique dolor purus eget
+                        sapien. Sed nunc magna, sollicitudin ut sapien in, blandit
+                        tincidunt mauris. Nunc malesuada nunc nisl, nec volutpat
+                        diam sollicitudin sit amet. Curabitur aliquet, felis non
+                        eleifend consectetur, dolor velit tincidunt nulla, quis
+                        ultrices metus mi quis leo. Curabitur eu malesuada lectus,
+                        non tempor mi. Vestibulum sodales felis augue, vitae
+                        lacinia libero accumsan a. Sed eleifend dui et libero
+                        elementum aliquam.
+                    </p>
                 </div>
-                <div class="spacer-30"></div>
-                <div class="row">
-                    <div class="col-md-5 col-md-offset-2">
-                        <h4>Objectifs</h4>
-                        <ul>
-                            <li>Maîtriser l’approche Domain-Driven Design (DDD) : pourquoi ? bénéfices ? principes clés.</li>
-                            <li>Étudier et mettre en oeuvre les building blocks du DDD</li>
-                            <li>Étudier et mettre en oeuvre les principes de conception : supple design et strategic design</li>
-                            <li>Étudier les architectures permettant de mettre en oeuvre une approche DDD</li>
-                            <li>Échanger sur les aspects concrets et pratiques du DDD avec des retours d’expérience</li>
-                        </ul>
-                    </div>
-                    <div class="col-md-5">
-                        <h4>Durée</h4>
-                        <p>3 jours</p>
-                    </div>
+            </div>
+        </section>
+        <!-- End Presentation Section -->
+        <div class="divider">
+            <img class="rellax" data-rellax-speed="8" src="/img/divide.svg"/>
+        </div>
+        <!-- Date Section -->
+        <section id="dates" class="content clearfix">
+            <div class="line-wrapper clearfix">
+                <div class="container clearfix">
+                    <div class="text-space clearfix"></div>
+                    <h2>Meetups à venir</h2>
                 </div>
-                <div class="spacer-15"></div>
-                <div class="row">
-                    <div class="col-md-5 col-md-offset-2">
-                        <h4>Pré-requis</h4>
-                        <ul>
-                            <li>Connaissance des concepts et d'un langage objet (Java, C#)</li>
-                            <li>Expérience du développement logiciel en entreprise</li>
-                        </ul>
-                    </div>
-                     <div class="col-md-3">
-                        <h4>Public</h4>
-                        <ul>
-                            <li>Architectes</li>
-                            <li>Développeurs senior ou junior</li>
-                            <li>Team Leader</li>
-                            <li>Chef de Projets</li>
-                        </ul>
-                    </div>
-                </div>
+            </div>
+            <pre>
+<code><span class="lightBlue">(</span><span class="blue">def</span> meetup
+     <span class="purple">{</span><span class="lightPurple">:date</span> <span class="lightGreen">“june 29 2016”</span>
+      <span class="lightPurple">:location</span> <span class="lightGreen">“41, rue Meslay - 75003”</span>
+      <span class="lightPurple">:participants</span> <span class="lightGreen">“Hiram Madeleine”</span>
+                    <span class="lightGreen">“Jérémie Grodziski”</span><span class="purple">}</span><span class="lightBlue">)</span></code>
+            </pre>
+            <div class="container clearfix">
+                <a class="meetup-link" href="#">voir sur meetup</a>
+                <div class="text-space"></div>
             </div>
         </section>
         <hr />
 
-        <!-- End presentation section -->
-        <!-- Contenu Section-->
-        <section id="contenu" class="wow fadeIn ptb-sm-40">
-            <div class="container">
-                <div class="row mt-60">
-                    <!-- Programme Content -->
-                    <div class="row text-center">
-                        <div class="col-md-8 col-md-offset-2">
-                            <h2>Contenu de la formation</h2>
-                            <div class="spacer-30"></div>
-                        </div>
-                    </div>
-                    <div class="col-md-8 col-md-offset-2 mb-30">
-                        <h4>Programme</h4>
-                        <p>La formation utilise un <strong>système de e-commerce</strong> comme fil rouge pour les cas pratiques. Les participants peuvent également soumettre des cas liés à leur domaine s'ils le souhaitent. </p>
-                        <p>La structure de code et les solutions sont fournis sur la plateforme Java, l'utilisation d'une autre plateforme (.Net, Ruby, Python, Clojure, ...) est cependant possible.</p>
-                        <div class="spacer-15"></div>
-                        <div class="skillbar" data-percent="5%">
-                            <h2 class="skillbar-title">Introduction à l'approche DDD</h2>
-                            <div class="skill-bar-percent">5%</div>
-                            <div class="skillbar-bar"></div>
-                        </div>
-                        <ul class="list-unstyled">
-                            <li>Origine, définitions et bénéfices</li>
-                            <li>Principes clés de l’approche</li>
-                            <li>Qu'est ce que l'activité de conception ?</li>
-                        </ul>
-                        <div class="spacer-15"></div>
-                         <div class="skillbar" data-percent="5%">
-                            <h2 class="skillbar-title">AVANT DE CONCEVOIR : Pourquoi ce logiciel ?</h2>
-                            <div class="skill-bar-percent">5%</div>
-                            <div class="skillbar-bar"></div>
-                        </div>
-                        <ul class="list-unstyled">
-                            <li>Définir la vision du projet</li>
-                            <li>Pourquoi le logiciel est développé ?</li>
-                            <li>Présentation des techniques :
-                                <ul>
-                                    <li>Feature Injection</li>
-                                    <li>Impact Mapping</li>
-                                    <li>User Story Mapping</li>
-                                    <li>Mental Models</li>
-                                </ul>
-                        </ul>
-                        <div class="spacer-15"></div>
-                        <div class="skillbar" data-percent="15%">
-                            <h2 class="skillbar-title">AVANT DE CONCEVOIR : Explorer le domaine et Spécifier le comportement du logiciel</h2>
-                            <div class="skill-bar-percent">15%</div>
-                            <div class="skillbar-bar"></div>
-                        </div>
-                        <ul class="list-unstyled">
-                            <li>Des scénarios avec des exemples pour explorer le domaine</li>
-                            <li><i>Event Storming</i>: Les événement dans le temps pour explorer le domaine</li>
-                            <li>Exprimer le comportement attendu avec des exemples au format BDD (Behavior-Driven Development : Given/When/Then)</li>
-                            <li>Organisation des scénarios : dépendances, mutualisation, gestion des données</li>
-                            <li>Comment exprimer les règles métiers dans les scénarios ?</li>
-                            <li>Cas Pratique</li>
-                        </ul>
-                        <div class="spacer-15"></div>
-                        <div class="skillbar" data-percent="5%">
-                            <h2 class="skillbar-title">Fondamentaux de Modélisation et Gestion de la Complexité</h2>
-                            <div class="skill-bar-percent">5%</div>
-                            <div class="skillbar-bar"></div>
-                        </div>
-                        <ul class="list-unstyled">
-                            <li>Qu'est ce qu'un modèle ? papier/crayon ou outil de modélisation ?</li>
-                            <li>Qu'est ce que la complexité ? outils pour la gérer</li>
-                            <li>Aspects pratiques : communication, intentions, forme (graphique, textuel), gestion collective du modèle</li>
-                        </ul>
-                        <div class="spacer-15"></div>
-                         <div class="skillbar" data-percent="30%">
-                            <h2 class="skillbar-title">Les <i>Building Blocks</i> du DDD</h2>
-                            <div class="skill-bar-percent">30%</div>
-                            <div class="skillbar-bar"></div>
-                        </div>
-                        <ul class="list-unstyled">
-                            <li>L'<em>ubiquitous language</em></li>
-                            <li><em>Building Blocks</em> du DDD :
-                                <ul>
-                                    <li>La gestion d'état avec les <em>Value Object</em> et les <em>Entity</em></li>
-                                    <li>L'accès aux <em>Entity</em> avec les <em>Repositories</em></li>
-                                    <li>Factory</li>
-                                    <li>Service</li>
-                                    <li>Module</li>
-                                    <li>Aggregate</li>
-                                    <li>Domain Event</li>
-                                </ul>
-                            </li>
-                            <li>Exercices pratiques de mise en œuvre des <em>Entity, Value objects</em> et <em>Repository</em></li>
-                        </ul>
-                        <div class="spacer-15"></div>
-                        <div class="skillbar" data-percent="20%">
-                            <h2 class="skillbar-title">DDD <i>Supple Design</i> pour un logiciel évolutif et testable</h2>
-                            <div class="skill-bar-percent">20%</div>
-                            <div class="skillbar-bar"></div>
-                        </div>
-                        <ul class="list-unstyled">
-                            <li>La gestion des dépendances</li>
-                            <li>La gestion d'états</li>
-                            <li>Séparation des responsabilités</li>
-                            <li>Encapsulation et Interface</li>
-                            <li>Présentation du Paradigme Fonctionnel : Lazyness, Immutabilité, Fonctions <i>Pures</i>
-                            </li>
-                            <li>DDD <i>Supple Design</i>
-                                <ul>
-                                    <li>Intention-revealing interface</li>
-                                    <li>Standalone classes</li>
-                                    <li>Side-Effect free function</li>
-                                    <li>Assertions</li>
-                                    <li>Conceptual contours</li>
-                                    <li>Closure on operations</li>
-                                </ul>
-                            </li>
-                        </ul>
-                        <div class="spacer-15"></div>
-                        <div class="skillbar" data-percent="10%">
-                            <h2 class="skillbar-title">Architectures pour une approche DDD</h2>
-                            <div class="skill-bar-percent">10%</div>
-                            <div class="skillbar-bar"></div>
-                        </div>
-                        <ul class="list-unstyled">
-                            <li>Modulariser le domaine</li>
-                            <li>Architecture Hexagonale : inversion de dépendances, le Domaine au coeur de l'architecture, utilisation des frameworks d'injection de dépendances avec le DDD (Spring, etc.)</li>
-                            <li>Architecture Événementielle : CQRS, Event Sourcing, lien avec le DDD</li>
-                            <li>Architecture Microservice avec le DDD : REST et SOA, apport du DDD</li>
-                            <li>Gestion de la persistance avec le DDD : aspects pratiques</li>
-                        </ul>
-                        <div class="spacer-15"></div>
-                         <div class="skillbar" data-percent="10%">
-                            <h2 class="skillbar-title">DDD <i>STRATEGIC DESIGN</i> : INTéGRER LE LOGICIEL DANS son écosystème, INTéGRER LES éQUIPES ENTRE-ELLES</h2>
-                            <div class="skill-bar-percent">10%</div>
-                            <div class="skillbar-bar"></div>
-                        </div>
-                        <ul class="list-unstyled">
-                            <li>Notion de <i>Bounded Context</i></li>
-                            <li>Comment intégrer différents modèles ?</li>
-                            <li><i>Context Map</i></li>
-                            <li>Relations entre systèmes et équipes :</li>
-                            <ul>
-                                <li>Shared Kernel</li>
-                                <li>Anticorruption Layer</li>
-                                <li>Conformist</li>
-                                <li>Customer/Supplier</li>
-                                <li>Separate Ways</li>
-                                <li>Open Host</li>
-                                <li>Published Language</li>
-                            </ul>
-                            </li>
-                            <li>Intégrer des systèmes Legacy : stratégie d’intégration, stratégie de refactoring</li>
-                        </ul>
-                    </div>
-                    <!-- End Programme Content -->
-                </div>
-                <div class="row mt-80">
-                </div>
-            </div>
-        </section>
-        <!-- End Contenu Section-->
-        <hr />
-        <!-- Pricing Section -->
-        <section id="pricing" class="ptb ptb-sm-40">
-            <div class="container text-center">
-                <h2>Dates</h2>
-                <div class="row">
-                    <div class="col-md-8 col-md-offset-2 ">
-                        <div class="table-responsive">
-                            <table class="table">
-                                <thead>
-                                    <tr>
-                                        <th>Date</th>
-                                        <th>Lieu</th>
-                                        <th>Inscription</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td class="dates">23 au 25 mars 2016</td>
-                                        <td class="dates">Paris<sup>*</sup></td>
-                                        <td>
-                                            <a class="btn btn-md btn-black" href="/inscription">S'inscrire</a>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td class="dates">22 au 24 juin 2016</td>
-                                        <td class="dates">Paris<sup>*</sup></td>
-                                        <td>
-                                            <a class="btn btn-md btn-black" href="/inscription">S'inscrire</a>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td class="dates">21 au 23 septembre 2016</td>
-                                        <td class="dates">Paris<sup>*</sup></td>
-                                        <td>
-                                            <a class="btn btn-md btn-black" href="/inscription">S'inscrire</a>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td class="dates">7 au 9 décembre 2016</td>
-                                        <td class="dates">Paris<sup>*</sup></td>
-                                        <td>
-                                            <a class="btn btn-md btn-black" href="/inscription">S'inscrire</a>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td style="font-size: 14px"><sup>*</sup>Le lieu exact vous est communiqué à l'inscription</td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
-                    </div>
-                </div>
-                <div class="spacer-60"></div>
-                <h2>Tarif</h2>
-                <div class="spacer-30"></div>
-                <div class="row">
-                    <div class="col-md-4 col-md-offset-2 ">
-                        <div class="Pricing-box highlight">
-                            <div class="price-title spacing-box">
-                                <h4>Inter-Entreprises</h4>
-                            </div>
-                            <hr />
-                            <div class="spacing-box">
-                                <div class="price"><span class="price-lg">1 690</span><span class="price-sm">€</span></div>
-                                <div class="spacer-30"></div>
-                                <span> / personne</span>
-                                <div class="price-tenure">Formation de 3 jours</div>
-                            </div>
-                            <hr />
-                            <div class="pricing-features spacing-grid">
-                                <ul>
-                                    <li>Programme commun</li>
-                                    <li>Sur Paris</li>
-                                    <li>Session tous les trois mois</li>
-                                    <li>Fil rouge sur un cas partagé</li>
-                                    <li>Support téléphonique à la mise en oeuvre</li>
-                                </ul>
-                            </div>
-                            <hr />
-                            <div class="spacing-grid">
-                                <a class="btn btn-md btn-black" href="/inscription">S'inscrire</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="Pricing-box">
-                            <div class="price-title spacing-box">
-                                <h4>Intra-Entreprises</h4>
-                            </div>
-                            <hr />
-                            <div class="spacing-box">
-                                <div class="price" style="font-size: 38px">Sur Devis</div>
-                                <div class="spacer-30"></div>
-                                <div class="price-tenure">Durée adaptée</div>
-                            </div>
-                            <hr />
-                            <div class="pricing-features spacing-grid">
-                                <ul>
-                                    <li>Programme <strong>sur-mesure</strong></li>
-                                    <li>Dans vos locaux</li>
-                                    <li>Dates Flexibles</li>
-                                    <li>Fil rouge dans <strong>votre domaine</strong></li>
-                                    <li>Support téléphonique à la mise en oeuvre</li>
-                                </ul>
-                            </div>
-                            <hr />
-                            <div class="spacing-grid">
-                                <a class="btn btn-md btn-black" href="mailto:jeremie@adixe.com">Nous contacter</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!-- End Pricing Section -->
-        <hr/>
-        <!-- Formateur Section -->
-        <section id="formateur" class="ptb ptb-sm-40">
-            <div class="wow fadeIn container text-center">
-                <h2>Formateur</h2>
-                <div class="spacer-30"></div>
-                <div class="row">
-                    <div class="col-md-4 col-sm-6 mb-45 col-md-offset-4">
-                        <div class="item">
-                            <div class="team-item nf-col-padding">
-                                <div class="team-item-img">
-                                    <img src="img/team/JeremieGrodziski-Photo.png" alt="">
-                                    <div class="team-item-detail">
-                                        <div class="team-item-detail-inner light-color">
-                                            <h5>Jérémie Grodziski</h5>
-                                            <p></p>
-                                            <ul class="social">
-                                                <li><a href="https://www.twitter.com/jgrodziski" target="_blank"><i class="fa fa-twitter"></i></a></li>
-                                                <li><a href="https://github.com/jgrodziski" target="_blank"><i class="fa fa-github"></i></a></li>
-                                                <li><a href="https://news.ycombinator.com/user?id=jgrodziski" target="_blank"><i class="fa fa-y-combinator"></i></a></li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="team-item-info">
-                                    <h5>Jérémie Grodziski</h5>
-                                    <p class="">Architecte, Lead Developer, Expert Domain-Driven Design</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!-- End Formateur Section -->
-        <hr />
-
-        <!-- Testimonials -->
-        <!--
-        <section id="testimonial " class="overlay-dark80 dark-bg ptb ptb-sm-80 " style="background-image: url( 'img/full/22.jpg'); " data-stellar-background-ratio="0.5 ">
-            <div class="container ">
-                <div class="owl-carousel testimonial-carousel nf-carousel-theme white ">
-                    <div class="item ">
-                        <div class="testimonial text-center dark-color ">
-                            <div class="container-icon "><i class="fa fa-quote-right "></i></div>
-                            <p class="lead ">" I got a dummy for Christmas and started teaching myself. I got books and records and sat in front of the practising. I did my first show in the third grade and just kept going. "</p>
-                            <h6 class="quote-author ">Jeff Dunham <span style="font-weight: 400; ">( Appel Studio )</span></h6>
-                        </div>
-                    </div>
-                    <div class="item ">
-                        <div class="testimonial text-center dark-color ">
-                            <div class="container-icon "><i class="fa fa-quote-right "></i></div>
-                            <p class="lead ">" It 's true, you can never eat a pet you name. And anyway, I did my first show in the third grade it would be like a ventriloquist eating his dummy. "</p>
-                            <h6 class="quote-author">Alexander Theroux <span style="font-weight: 400;">( USA )</span></h6>
-                        </div>
-                    </div>
-                    <div class="item">
-                        <div class="testimonial text-center dark-color">
-                            <div class="container-icon"><i class="fa fa-quote-right"></i></div>
-                            <p class="lead">" We're not leaving here without Buster, man. Leave no crash-test dummy behind! "</p>
-                            <h6 class="quote-author ">Adam Savage <span style="font-weight: 400; ">( Artist )</span></h6>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <hr />
-        -->
-        <!-- End Testimonials -->
-
-        <!-- END CONTENT ---------------------------------------------------------------------------->
 
     <!-- Blog Section -->
         <section id="blog " class="wow fadeIn ptb ptb-sm-80 ">
@@ -543,15 +159,6 @@
                         </div>
                     </div>
                 
-                    <div class="col-lg-4 col-md-6 col-sm-6 mb-sm-30 ">
-                        <div class="blog-post ">
-                            <div class="post-header ">
-                                <h5><a href="/software-design/2016/01/20/introduction-to-domain-driven-design-entity-and-value-object.html">Introduction au Domain Driven Design <br/>- <em>Entity</em> et <em>Value Object</em> -</a></h5>
-                            </div>
-                            <div class="post-meta "><!--<span><a>Jérémie Grodziski</a>,</span>--><span>20 January 2016</span></div>
-                        </div>
-                    </div>
-                
 
                  <!-- Pagination Nav -->
                 
@@ -564,69 +171,6 @@
 
      <!-- FOOTER -->
         <footer class="footer pt-80 ">
-            <div class="container ">
-                <div class="row mb-60 ">
-                    <!-- Logo -->
-                    <div class="col-md-6 col-sm-6 col-xs-12 mb-xs-30 ">
-                        <a href="index.html">
-                            <h3>Domain-Driven-Design.eu</h3></a>
-                    </div>
-                    <!-- Logo -->
-
-                    <!-- Newsletter -->
-                    <div class="col-md-4 col-sm-5 col-xs-12 mb-xs-30 ">
-                        <div class="newsletter ">
-                            <!--<form>
-                                <input type="email " class="newsletter-input input-md newsletter-input mb-0 " placeholder="Enter Your Email ">
-                                <button class="newsletter-btn btn btn-xs btn-white " type="submit " value=" "><i class="fa fa-angle-right mr-0 "></i></button>
-                            </form>-->
-                        </div>
-                    </div>
-                    <!-- End Newsletter -->
-
-                    <!-- Social -->
-                    <div class="col-md-2 col-sm-4 col-xs-12 ">
-                        <ul class="social ">
-                            <li><a target="_blank " href="https://www.twitter.com/jgrodziski"><i class="fa fa-twitter "></i></a></li>
-                        </ul>
-                    </div>
-                    <!-- End Social -->
-                </div>
-                <!--Footer Info -->
-                <div class="row footer-info mb-60 ">
-                    <div class="col-md-3 col-sm-12 col-xs-12 mb-sm-30 ">
-                        <p class="mb-xs-0 ">Formation Domain-Driven Design en Français sur Paris.</p>
-                    </div>
-                    <div class="col-md-5 col-sm-6 col-xs-12 mb-sm-30 mb-xs-0 ">
-                        <ul class="link ">
-                            <li><a href="/blog">Blog</a></li>
-                            <li><a href="#presentation">Présentation de la formation Domain-Driven Design</a></li>
-                            <li><a href="#contenu">Contenu de la Formation</a></li>
-                            <li><a href="#pricing">Dates &amp; Tarifs de la Formation</a></li>
-                            <li><a href="#formateur">Formateur</a></li>
-                        </ul>
-                    </div>
-                    <div class="col-md-4 col-sm-12 col-xs-12 ">
-                        <p><strong>Adixe SARL</strong><br/>
-                        231 rue Saint-Honoré <br/>
-                        75001 Paris, France. <br/>
-                        <br/>
-                        R.C.S. Paris 500 655 220 <br/>
-                        N° Déclaration d'activité de Formation <br/>11 75 52658 75<br/>
-                        <br/>
-                        </p>
-                        <ul class="link-small ">
-                            <li><a href="mailto:jeremie@adixe.com "><i class="fa fa-envelope-o left "></i>jeremie@adixe.com</a></li>
-                            <li><a><i class="fa fa-phone left "></i>+33 (0) 6 71 01 06 52</a></li>
-                        </ul>
-                    </div>
-                </div>
-                <!-- End Footer Info -->
-            </div>
-
-            <hr />
-
-            <!-- Copyright Bar -->
             <section class="copyright ptb-60 ">
                 <div class="container ">
                     <p class=" ">
@@ -635,7 +179,6 @@
                     </p>
                 </div>
             </section>
-            <!-- End Copyright Bar -->
 
         </footer>
         <!-- END FOOTER -->
@@ -645,6 +188,7 @@
             <i class="fa fa-angle-double-up "></i>
         </a>
         <!-- End Scroll Top -->
+
 
 
     <!-- JS -->
@@ -659,25 +203,39 @@
 
     </script>
     <script src="/js/jquery-1.11.2.min.js " type="text/javascript "></script>
-    <script src="/js/plugin/jquery.easing.js " type="text/javascript "></script>
+    <!--script src="/js/plugin/jquery.easing.js " type="text/javascript "></script>
     <script src="/js/jquery-ui.min.js " type="text/javascript "></script>
     <script src="/js/bootstrap.min.js " type="text/javascript "></script>
     <script src="/js/plugin/jquery.flexslider.js " type="text/javascript "></script>
     <script src="/js/plugin/background-check.min.js " type="text/javascript "></script>
-    <script src="/js/plugin/jquery.viewportchecker.js " type="text/javascript "></script>
+    <script src="/js/plugin/jquery.viewportchecker.js " type="text/javascript "></script-->
     <!--<script src="/js/plugin/wow.min.js " type="text/javascript "></script>-->
-    <script src="/js/plugin/jquery.stellar.min.js " type="text/javascript "></script>
+    <!--script src="/js/plugin/jquery.stellar.min.js " type="text/javascript "></script>
     <script src="/js/plugin/jquery.fitvids.js " type="text/javascript "></script>
     <script src="/js/plugin/jquery.colorbox-min.js " type="text/javascript "></script>
-    <script src="/js/plugin/owl.carousel.min.js " type="text/javascript "></script>
+    <script src="/js/plugin/owl.carousel.min.js " type="text/javascript "></script-->
     <!--<script src="/js/plugin/isotope.pkgd.min.js " type="text/javascript "></script>
     <script src="/js/plugin/masonry.pkgd.min.js " type="text/javascript "></script>-->
-    <script src="/js/plugin/imagesloaded.pkgd.min.js " type="text/javascript "></script>
+    <!--script src="/js/plugin/imagesloaded.pkgd.min.js " type="text/javascript "></script>
     <script src="/js/plugin/jPushMenu.js " type="text/javascript "></script>
     <script src="/js/plugin/jquery.fs.tipper.min.js " type="text/javascript "></script>
     <script src="/js/plugin/mediaelement-and-player.min.js "></script>
     <script src="/js/theme.js " type="text/javascript "></script>
-    <script src="/js/navigation.js " type="text/javascript "></script>
+    <script src="/js/navigation.js " type="text/javascript "></script-->
+
+    <script src="/js/smooth-scroll.js " type="text/javascript "></script>
+    <script src="/js/parallax.min.js " type="text/javascript "></script>
+    <script src="/js/rellax.min.js " type="text/javascript "></script>
+
+    <script>
+    var scene = document.getElementById('parallax-scene');
+    var parallax = new Parallax(scene);
+    </script>
+
+    <script>
+        var rellax = new Rellax('.rellax');
+    </script>
+
 
 
 </body>
