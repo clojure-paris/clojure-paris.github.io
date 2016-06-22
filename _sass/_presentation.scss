@@ -25,6 +25,12 @@
     height: 30px;
 }
 
+.big-text-space {
+    display: block;
+    width: 100%;
+    height: 60px;
+}
+
 .presentation {
     display: block;
     width: 100%;
@@ -143,6 +149,7 @@
     height: 40px;
     top: 300px;
     left: 450px;
+    z-index: 200;
 }
 
 .pres-hexagone-lightpurple {
@@ -152,6 +159,7 @@
     height: 90px;
     top: 500px;
     right: 150px;
+    z-index: 200;
 }
 
 .pres-colon-lightgreen {
@@ -161,6 +169,7 @@
     height: 40px;
     top: 250px;
     left: 100px;
+    z-index: 200;
 }
 
 .pres-bracket-lightblue {
@@ -170,4 +179,5 @@
     height: 50px;
     top: 1000px;
     right: 500px;
+    z-index: 200;
 }
