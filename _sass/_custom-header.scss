@@ -65,7 +65,7 @@
             text-decoration: none;
             font-size: 20px;
             overflow: hidden;
-            transition: color 0.15s;
+            //transition: color 0.15s;
 
             &::after {
                 content: "";
@@ -75,12 +75,12 @@
                 bottom: -3px;
                 left: 15px;
                 right: 15px;
-                background-color: $lightGreen;
-                transition: bottom 0.15s;
+                background-color: $lightBlue;
+                //transition: bottom 0.15s;
             }
 
             &:hover {
-                color: $lightGreen;
+                color: $lightBlue;
 
                 &::after {
                     bottom: 0;
@@ -88,10 +88,10 @@
             }
 
             &:active {
-                color: $green;
+                color: $blue;
 
                 &::after {
-                    background-color: $green;
+                    background-color: $blue;
                 }
             }
         }
