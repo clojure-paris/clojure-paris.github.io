@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Formation Domain Driven Design</title>
+    <title>Paris Clojure Meetup</title>
     <description>Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.
 </description>
     <link>http://domain-driven-design.eu/</link>
     <atom:link href="http://domain-driven-design.eu/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Wed, 22 Jun 2016 14:43:32 +0200</pubDate>
-    <lastBuildDate>Wed, 22 Jun 2016 14:43:32 +0200</lastBuildDate>
-    <generator>Jekyll v3.1.2</generator>
+    <pubDate>Wed, 29 Jun 2016 17:46:13 +0200</pubDate>
+    <lastBuildDate>Wed, 29 Jun 2016 17:46:13 +0200</lastBuildDate>
+    <generator>Jekyll v3.1.6</generator>
     
       <item>
         <title>Domain Driven Design Value Type</title>
@@ -48,15 +48,15 @@
 &lt;h3 id=&quot;galit-forte&quot;&gt;Égalité forte&lt;/h3&gt;
 
 &lt;p&gt;L’ensemble des attributs d’une valeur permettent d’établir si elle est égale à une autre valeur.Exemple : exemple, un montant de 
-&lt;code class=&quot;highlighter-rouge&quot;&gt;
+&lt;code&gt;
 10 Euros {quantité: 10, devise: &quot;EUR&quot;}
 &lt;/code&gt;
 est égale à un autre montant de 
-&lt;code class=&quot;highlighter-rouge&quot;&gt;
+&lt;code&gt;
 10 Euros {quantité: 10, devise: &quot;EUR&quot;}
 &lt;/code&gt;
 mais différentes d’un montant de 
-&lt;code class=&quot;highlighter-rouge&quot;&gt;
+&lt;code&gt;
 10 Dollars {quantité: 10, devise: &quot;USD&quot;}
 &lt;/code&gt;&lt;/p&gt;
 
@@ -64,12 +64,12 @@ mais différentes d’un montant de
 
 &lt;p&gt;C’est là que les value types se distinguent d’une simple structure de données associative. Ils possèdent des contraintes et des comportement lié aux concepts du domaine qu’ils représentent.
 Exemple : 
-Un value type &lt;code class=&quot;highlighter-rouge&quot;&gt;Montant&lt;/code&gt; posséde comme contraintes :&lt;/p&gt;
+Un value type &lt;code&gt;Montant&lt;/code&gt; posséde comme contraintes : &lt;/p&gt;
 
 &lt;ul&gt;
   &lt;li&gt;&lt;em&gt;Quantité&lt;/em&gt; : strictement positive, un montant négatif de -10 € n’a pas de sens. Précision à deux décimales.&lt;/li&gt;
   &lt;li&gt;&lt;em&gt;Code ISO de la devise&lt;/em&gt; appartenant à l’ensemble des devises connus (en Java l’objet Currency fournit avec le SDK). Ex : “EUR”, “USD”, “GBP”.
-et comme opérations :&lt;/li&gt;
+et comme opérations : &lt;/li&gt;
   &lt;li&gt;ajouter&lt;/li&gt;
   &lt;li&gt;soustraire&lt;/li&gt;
   &lt;li&gt;comparer&lt;/li&gt;
