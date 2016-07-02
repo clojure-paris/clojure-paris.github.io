@@ -10,3 +10,6 @@ pom.xml.asc
 .lein-plugins/
 .lein-failures
 /resources/public/
+_site
+.sass-cache
+*.sublime*
