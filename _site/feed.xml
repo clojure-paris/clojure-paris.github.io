@@ -1,0 +1,270 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Formation Domain Driven Design</title>
+    <description>Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.
+</description>
+    <link>http://domain-driven-design.eu/</link>
+    <atom:link href="http://domain-driven-design.eu/feed.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>Sun, 26 Jun 2016 15:01:58 +0200</pubDate>
+    <lastBuildDate>Sun, 26 Jun 2016 15:01:58 +0200</lastBuildDate>
+    <generator>Jekyll v3.1.2</generator>
+    
+      <item>
+        <title>Domain Driven Design Value Type</title>
+        <description>&lt;h1 id=&quot;quest-ce-quune-valeur-&quot;&gt;Qu’est ce qu’une valeur ?&lt;/h1&gt;
+
+&lt;p&gt;Le nombre 42, un montant de 10 Euros, une distance de 3 kilomètres, mon prénom “Jérémie”, la date 14 avril 2016 sont toutes des valeurs.&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;&lt;strong&gt;Une valeur est un concept du domaine qui mesure, quantifie ou décrit quelque chose.&lt;/strong&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Allez une petite définition un peu plus formelle pour la route :&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;&lt;strong&gt;Une valeur est quelque chose d’intangible et d’immutable&lt;/strong&gt;&lt;/p&gt;
+
+  &lt;ul&gt;
+    &lt;li&gt;
+      &lt;p&gt;&lt;strong&gt;Intangible&lt;/strong&gt; signifie : qui existe en dehors du temps et de l’espace&lt;/p&gt;
+    &lt;/li&gt;
+    &lt;li&gt;
+      &lt;p&gt;&lt;strong&gt;Immutable&lt;/strong&gt; signifie : qui ne change pas une fois créée&lt;/p&gt;
+    &lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Intangible, j’avoue c’est un peu rude, prenons donc un exemple : si je vous dit “20 Euros”, vous comprenez le sens de cette valeur quelque soit le lieu où je l’énonce (Paris) et le moment (14 avril 2016). C’est cela être intangible pour une valeur. Dit autrement, &lt;strong&gt;on supprime le &lt;em&gt;temps&lt;/em&gt; du paysage de la valeur et cela lui enlève une part importante de complication&lt;/strong&gt;. L’immutabilité semble quelque chose d’acquis pour le commun des mortels mais pas pour le programmeur, qui est habitué à voir des variables partout. Même s’il affecte des valeurs à des variables et finit par confondre les deux et à voir des changements partout.&lt;/p&gt;
+
+&lt;h1 id=&quot;caractristiques-dune-valeur&quot;&gt;Caractéristiques d’une valeur&lt;/h1&gt;
+
+&lt;h3 id=&quot;immutables&quot;&gt;Immutables&lt;/h3&gt;
+&lt;p&gt;Par définition du mot “valeur”, une valeur ne change pas.&lt;/p&gt;
+
+&lt;h3 id=&quot;tout-conceptuel&quot;&gt;“Tout” conceptuel&lt;/h3&gt;
+&lt;p&gt;La valeur a une signification locale, c’est à dire qui est auto-suffisante pour en saisir le sens. La définition de la valeur peut faire intervenir éventuellement des concepts de niveaux d’abstraction plus bas mais leur sens est également auto-suffisant, par exemple une position sur une sphère fait intervenir la notion - de plus bas niveau - d’angle.&lt;/p&gt;
+
+&lt;h3 id=&quot;galit-forte&quot;&gt;Égalité forte&lt;/h3&gt;
+
+&lt;p&gt;L’ensemble des attributs d’une valeur permettent d’établir si elle est égale à une autre valeur.Exemple : exemple, un montant de 
+&lt;code class=&quot;highlighter-rouge&quot;&gt;
+10 Euros {quantité: 10, devise: &quot;EUR&quot;}
+&lt;/code&gt;
+est égale à un autre montant de 
+&lt;code class=&quot;highlighter-rouge&quot;&gt;
+10 Euros {quantité: 10, devise: &quot;EUR&quot;}
+&lt;/code&gt;
+mais différentes d’un montant de 
+&lt;code class=&quot;highlighter-rouge&quot;&gt;
+10 Dollars {quantité: 10, devise: &quot;USD&quot;}
+&lt;/code&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;riches-en-logique-du-domaine-contraintes-comportement&quot;&gt;Riches en Logique du domaine (contraintes, comportement)&lt;/h3&gt;
+
+&lt;p&gt;C’est là que les value types se distinguent d’une simple structure de données associative. Ils possèdent des contraintes et des comportement lié aux concepts du domaine qu’ils représentent.
+Exemple : 
+Un value type &lt;code class=&quot;highlighter-rouge&quot;&gt;Montant&lt;/code&gt; posséde comme contraintes :&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;em&gt;Quantité&lt;/em&gt; : strictement positive, un montant négatif de -10 € n’a pas de sens. Précision à deux décimales.&lt;/li&gt;
+  &lt;li&gt;&lt;em&gt;Code ISO de la devise&lt;/em&gt; appartenant à l’ensemble des devises connus (en Java l’objet Currency fournit avec le SDK). Ex : “EUR”, “USD”, “GBP”.
+et comme opérations :&lt;/li&gt;
+  &lt;li&gt;ajouter&lt;/li&gt;
+  &lt;li&gt;soustraire&lt;/li&gt;
+  &lt;li&gt;comparer&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;combinables-oprateurs-fonctions&quot;&gt;Combinables (opérateurs, fonctions)&lt;/h3&gt;
+
+&lt;h3 id=&quot;auto-validant&quot;&gt;Auto-validant&lt;/h3&gt;
+
+</description>
+        <pubDate>Thu, 14 Apr 2016 00:00:00 +0200</pubDate>
+        <link>http://domain-driven-design.eu/software-design/2016/04/14/domain-driven-design-value-object.html</link>
+        <guid isPermaLink="true">http://domain-driven-design.eu/software-design/2016/04/14/domain-driven-design-value-object.html</guid>
+        
+        <category>domain-driven-design</category>
+        
+        <category>DDD</category>
+        
+        <category>value object</category>
+        
+        <category>value type</category>
+        
+        
+        <category>software-design</category>
+        
+      </item>
+    
+      <item>
+        <title>Bibliographie Domain Driven Design</title>
+        <description>&lt;h1 id=&quot;sections&quot;&gt;Sections&lt;/h1&gt;
+
+&lt;div class=&quot;maruku_toc&quot;&gt;
+    &lt;ul style=&quot;list-style: none;&quot;&gt;
+        &lt;li&gt;
+            &lt;a href=&quot;#domain_driven_design&quot;&gt;Domain-Driven Design&lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li&gt;
+            &lt;a href=&quot;#bdd&quot;&gt;Behavior-Driven Development&lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li&gt;
+            &lt;a href=&quot;#other_paradigms_fp_logical_&quot;&gt;Functional Paradigm&lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li&gt;
+            &lt;a href=&quot;#user_interactions&quot;&gt;User Interactions&lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li&gt;
+            &lt;a href=&quot;#architectures&quot;&gt;Architectures&lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li&gt;
+            &lt;a href=&quot;#refactoring_and_clean_code&quot;&gt;Refactoring and Clean Code&lt;/a&gt;
+        &lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/div&gt;
+
+&lt;h2 id=&quot;a-namedomaindrivendesignadomain-driven-design&quot;&gt;&lt;a name=&quot;domain_driven_design&quot;&gt;&lt;/a&gt;Domain Driven Design&lt;/h2&gt;
+
+&lt;h3 id=&quot;domain-driven-design-tackling-complexity-in-the-hearth-of-software-eric-evanshttpwwwamazonfrgpproduct0321125215refaslitftlieutf8amptagwwwgrodziskic-21amplinkcodeas2ampcamp1642ampcreative6746ampcreativeasin0321125215&quot;&gt;&lt;a href=&quot;http://www.amazon.fr/gp/product/0321125215/ref=as_li_tf_tl?ie=UTF8&amp;amp;tag=wwwgrodziskic-21&amp;amp;linkCode=as2&amp;amp;camp=1642&amp;amp;creative=6746&amp;amp;creativeASIN=0321125215&quot;&gt;Domain-Driven Design. Tackling complexity in the Hearth of Software. Eric Evans&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;&lt;a href=&quot;http://www.amazon.fr/gp/product/0321125215/ref=as_li_tf_tl?ie=UTF8&amp;amp;tag=wwwgrodziskic-21&amp;amp;linkCode=as2&amp;amp;camp=1642&amp;amp;creative=6746&amp;amp;creativeASIN=0321125215&quot;&gt;&lt;img src=&quot;/img/books/Domain-Driven-Design-Eric-Evans.png&quot; alt=&quot;Domain-Driven-Design-Eric-Evans&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;L’ouvrage fondateur du DDD et sa référence, souvent nommé le “Blue Book”. Ce livre n’est pas forcément le plus digeste, mais son contenu est très profond et les exemples très bien choisis. Le chapitre sur les &lt;em&gt;Bounded Context&lt;/em&gt; (Part 4, Chap 14) est vraiment à lire car c’est l’aspect novateur du DDD.&lt;/p&gt;
+
+&lt;h3 id=&quot;domain-driven-design-quickly-infoqhttpwwwinfoqcomminibooksdomain-driven-design-quickly&quot;&gt;&lt;a href=&quot;http://www.infoq.com/minibooks/domain-driven-design-quickly&quot;&gt;Domain Driven Design Quickly. Infoq&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;&lt;a href=&quot;http://www.infoq.com/minibooks/domain-driven-design-quickly&quot;&gt;&lt;img src=&quot;/img/books/Domain-Driven-Design-Quickly-Infoq.png&quot; alt=&quot;Domain-Driven-Design-Quickly-Infoq&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;domain-driven-design-using-naked-objects-dan-haywoodhttpwwwamazonfrgpproduct1934356441refaslitftlieutf8amptagwwwgrodziskic-21amplinkcodeas2ampcamp1642ampcreative6746ampcreativeasin1934356441&quot;&gt;&lt;a href=&quot;http://www.amazon.fr/gp/product/1934356441/ref=as_li_tf_tl?ie=UTF8&amp;amp;tag=wwwgrodziskic-21&amp;amp;linkCode=as2&amp;amp;camp=1642&amp;amp;creative=6746&amp;amp;creativeASIN=1934356441&quot;&gt;Domain Driven Design Using Naked Objects. Dan Haywood&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;&lt;a href=&quot;http://www.amazon.fr/gp/product/1934356441/ref=as_li_tf_tl?ie=UTF8&amp;amp;tag=wwwgrodziskic-21&amp;amp;linkCode=as2&amp;amp;camp=1642&amp;amp;creative=6746&amp;amp;creativeASIN=1934356441&quot;&gt;&lt;img src=&quot;/img/books/Domain-Driven-Design-Using-Naked-Objects-Dan-Haywood.png&quot; alt=&quot;Domain-Driven-Design-Using-Naked-Objects-Dan-Haywood&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;J’observe les évolutions de ce framework et de cette approche depuis sa création il y a plus de 10 ans. J’ai toujours été fasciné et attiré par ce concept qui pose une contrainte très forte (la UI est complétement déduite du modèle objet du domaine) et qui donc “force” à aboutir à une domaine directement compréhensible par les utilisateurs finaux. A lire absolument.&lt;/p&gt;
+
+&lt;h3 id=&quot;implementing-domain-driven-design-vaughn-vernonhttpwwwamazoncomimplementing-domain-driven-design-vaughn-vernondp0321834577&quot;&gt;&lt;a href=&quot;http://www.amazon.com/Implementing-Domain-Driven-Design-Vaughn-Vernon/dp/0321834577&quot;&gt;Implementing Domain-Driven Design. Vaughn Vernon&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;&lt;a href=&quot;http://www.amazon.com/Implementing-Domain-Driven-Design-Vaughn-Vernon/dp/0321834577&quot;&gt;&lt;img src=&quot;/img/books/Implementing-Domain-Driven-Design-Vaughn-Vernon.png&quot; alt=&quot;Implementing-Domain-Driven-Design-Vaughn-Vernon&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Un ouvrage qui traite des aspects très concrets du DDD, un bon complément au “Blue Book”&lt;/p&gt;
+
+&lt;h3 id=&quot;patterns-principles-and-practices-of-domain-driven-designhttpwwwwroxcomwileycdawroxtitlepatterns-principles-and-practices-of-domain-driven-designproductcd-1118714709html&quot;&gt;&lt;a href=&quot;http://www.wrox.com/WileyCDA/WroxTitle/Patterns-Principles-and-Practices-of-Domain-Driven-Design.productCd-1118714709.html&quot;&gt;Patterns, Principles, and Practices of Domain-Driven Design&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;&lt;a href=&quot;http://www.wrox.com/WileyCDA/WroxTitle/Patterns-Principles-and-Practices-of-Domain-Driven-Design.productCd-1118714709.html&quot;&gt;&lt;img src=&quot;/img/books/patterns-principles-practices-of-domain-driven-design.png&quot; alt=&quot;Patterns, Principles, and Practices of Domain-Driven Design&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;analysis-patterns-martin-fowlerhttpwwwamazonfrgpproduct0201895420refasliqfspasiniltlieutf8amptagwwwgrodziskic-21amplinkcodeas2ampcamp1642ampcreative6746ampcreativeasin0201895420&quot;&gt;&lt;a href=&quot;http://www.amazon.fr/gp/product/0201895420/ref=as_li_qf_sp_asin_il_tl?ie=UTF8&amp;amp;tag=wwwgrodziskic-21&amp;amp;linkCode=as2&amp;amp;camp=1642&amp;amp;creative=6746&amp;amp;creativeASIN=0201895420&quot;&gt;Analysis Patterns. Martin Fowler&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;&lt;a href=&quot;http://www.amazon.fr/gp/product/0201895420/ref=as_li_qf_sp_asin_il_tl?ie=UTF8&amp;amp;tag=wwwgrodziskic-21&amp;amp;linkCode=as2&amp;amp;camp=1642&amp;amp;creative=6746&amp;amp;creativeASIN=0201895420&quot;&gt;&lt;img src=&quot;/img/books/Analysis-Patterns-Martin-Fowler.png&quot; alt=&quot;Analysis-Patterns-Martin-Fowler&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Un livre assez ancien mais toujours d’actualité qui montre des exemples concrets de solutions de plus en plus sophistiqués pour traiter des problèmes récurrents dans des domaines variés (observations et mesures, inventaires et comptabilité, etc.)&lt;/p&gt;
+
+&lt;h3 id=&quot;introducing-eventstorminghttpsleanpubcomintroducingeventstorming&quot;&gt;&lt;a href=&quot;https://leanpub.com/introducing_eventstorming&quot;&gt;Introducing EventStorming&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;&lt;a href=&quot;https://leanpub.com/introducing_eventstorming&quot;&gt;&lt;img src=&quot;/img/books/introducing-event-storming-alberto-brandolini.png&quot; alt=&quot;Introducing EventStorming&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;L’EventStorming est une technique incontournable pour explorer un domaine lors du démarrage d’un projet avec les experts de ce domaine.&lt;/p&gt;
+
+&lt;h3 id=&quot;living-documentation-cyrille-martrairehttpsleanpubcomlivingdocumentation&quot;&gt;&lt;a href=&quot;https://leanpub.com/livingdocumentation&quot;&gt;Living Documentation. Cyrille Martraire&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;&lt;a href=&quot;https://leanpub.com/livingdocumentation&quot;&gt;&lt;img src=&quot;/img/books/living-documentation-cyrille-martraire.png&quot; alt=&quot;Living Documentation&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Un excellent ouvrage de mon ami Cyrille Martraire sur les aspects documentations d’un logiciel, en lien bien sûr avec le DDD.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h2 id=&quot;a-namebddabehavior-driven-development&quot;&gt;&lt;a name=&quot;bdd&quot;&gt;&lt;/a&gt;Behavior-Driven Development&lt;/h2&gt;
+
+&lt;h3 id=&quot;bdd-in-actionhttpswwwmanningcombooksbdd-in-action&quot;&gt;&lt;a href=&quot;https://www.manning.com/books/bdd-in-action&quot;&gt;BDD in Action&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;&lt;a href=&quot;https://www.manning.com/books/bdd-in-action&quot;&gt;&lt;img src=&quot;/img/books/bdd-in-action-john-ferguson-smart.png&quot; alt=&quot;BDD in Action&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Le BDD est l’approche complémentaire du DDD, en ce sens qu’un design, c-à-d une solution, n’est bonne que si elle est adaptée à l’usage qui en sera fait. Hors rien de mieux que le BDD pour définir cet usage !&lt;/p&gt;
+
+&lt;h3 id=&quot;specification-by-example-gojko-adzichttpwwwamazonfrgpproduct1617290084refaslitftlieutf8amptagwwwgrodziskic-21amplinkcodeas2ampcamp1642ampcreative6746ampcreativeasin1617290084&quot;&gt;&lt;a href=&quot;http://www.amazon.fr/gp/product/1617290084/ref=as_li_tf_tl?ie=UTF8&amp;amp;tag=wwwgrodziskic-21&amp;amp;linkCode=as2&amp;amp;camp=1642&amp;amp;creative=6746&amp;amp;creativeASIN=1617290084&quot;&gt;Specification By Example. Gojko Adzic&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;&lt;a href=&quot;http://www.amazon.fr/gp/product/1617290084/ref=as_li_tf_tl?ie=UTF8&amp;amp;tag=wwwgrodziskic-21&amp;amp;linkCode=as2&amp;amp;camp=1642&amp;amp;creative=6746&amp;amp;creativeASIN=1617290084&quot;&gt;&lt;img src=&quot;/img/books/Specification-By-Example-Gojko-Adzic.png&quot; alt=&quot;Specification-By-Example-Gojko-Adzic&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Un ouvrage “Jalon” qui a redéfinit cette vieille notion de spécification, le BDD en est une majeure partie.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h2 id=&quot;a-namearchitecturesaarchitectures&quot;&gt;&lt;a name=&quot;architectures&quot;&gt;&lt;/a&gt;Architectures&lt;/h2&gt;
+
+&lt;h3 id=&quot;patterns-of-enterprise-application-architecture-martin-fowler-addison-wesleyhttpwwwamazonfrgpproduct0321127420refaslitftlieutf8amptagwwwgrodziskic-21amplinkcodeas2ampcamp1642ampcreative6746ampcreativeasin0321127420&quot;&gt;&lt;a href=&quot;http://www.amazon.fr/gp/product/0321127420/ref=as_li_tf_tl?ie=UTF8&amp;amp;tag=wwwgrodziskic-21&amp;amp;linkCode=as2&amp;amp;camp=1642&amp;amp;creative=6746&amp;amp;creativeASIN=0321127420&quot;&gt;Patterns of Enterprise Application Architecture. Martin Fowler. Addison Wesley&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;&lt;a href=&quot;http://www.amazon.fr/gp/product/0321127420/ref=as_li_tf_tl?ie=UTF8&amp;amp;tag=wwwgrodziskic-21&amp;amp;linkCode=as2&amp;amp;camp=1642&amp;amp;creative=6746&amp;amp;creativeASIN=0321127420&quot;&gt;&lt;img src=&quot;/img/books/Patterns-Of-Enterprise-Application-Architecture-Martin-Fowler.png&quot; alt=&quot;Patterns-Of-Enterprise-Application-Architecture-Martin-Fowler&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Un ouvrage assez ancien, plus forcément à jour sur certains styles architecturals (event sourcing, etc.) mais les patterns qui s’y trouve décrivent un nombre important de frameworks que l’on trouve assez fréquement (MVC, ORM, etc.)&lt;/p&gt;
+
+&lt;h3 id=&quot;lean-architecture-james-coplienhttpwwwamazonfrgpproduct0470684208refaslitftlieutf8amptagwwwgrodziskic-21amplinkcodeas2ampcamp1642ampcreative6746ampcreativeasin0470684208&quot;&gt;&lt;a href=&quot;http://www.amazon.fr/gp/product/0470684208/ref=as_li_tf_tl?ie=UTF8&amp;amp;tag=wwwgrodziskic-21&amp;amp;linkCode=as2&amp;amp;camp=1642&amp;amp;creative=6746&amp;amp;creativeASIN=0470684208&quot;&gt;Lean Architecture. James Coplien&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;&lt;a href=&quot;http://www.amazon.fr/gp/product/0470684208/ref=as_li_tf_tl?ie=UTF8&amp;amp;tag=wwwgrodziskic-21&amp;amp;linkCode=as2&amp;amp;camp=1642&amp;amp;creative=6746&amp;amp;creativeASIN=0470684208&quot;&gt;&lt;img src=&quot;/img/books/Lean-Architecture-James-Coplien.png&quot; alt=&quot;Lean-Architecture-James-Coplien&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;enterprise-integration-patterns-gregor-hohpe-bobby-woolf-addison-wesleyhttpwwwamazonfrgpproduct0321200683refaslitftlieutf8amptagwwwgrodziskic-21amplinkcodeas2ampcamp1642ampcreative6746ampcreativeasin0321200683&quot;&gt;&lt;a href=&quot;http://www.amazon.fr/gp/product/0321200683/ref=as_li_tf_tl?ie=UTF8&amp;amp;tag=wwwgrodziskic-21&amp;amp;linkCode=as2&amp;amp;camp=1642&amp;amp;creative=6746&amp;amp;creativeASIN=0321200683&quot;&gt;Enterprise Integration Patterns. Gregor Hohpe, Bobby Woolf. Addison Wesley&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;&lt;a href=&quot;http://www.amazon.fr/gp/product/0321200683/ref=as_li_tf_tl?ie=UTF8&amp;amp;tag=wwwgrodziskic-21&amp;amp;linkCode=as2&amp;amp;camp=1642&amp;amp;creative=6746&amp;amp;creativeASIN=0321200683&quot;&gt;&lt;img src=&quot;/img/books/Enterprise-Integration-Patterns-Gregor-Hohpe-Bobby-Woolf.png&quot; alt=&quot;Enterprise-Integration-Patterns-Gregor-Hohpe-Bobby-Woolf&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h2 id=&quot;a-namerefactoringandcleancodearefactoring-and-clean-code&quot;&gt;&lt;a name=&quot;refactoring_and_clean_code&quot;&gt;&lt;/a&gt;Refactoring and Clean Code&lt;/h2&gt;
+
+&lt;h3 id=&quot;clean-code-robert-bob-martinhttpwwwamazonfrclean-code-handbook-software-craftsmanshipdp0132350882&quot;&gt;&lt;a href=&quot;http://www.amazon.fr/Clean-Code-Handbook-Software-Craftsmanship/dp/0132350882&quot;&gt;Clean Code. Robert “Bob” Martin&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;&lt;a href=&quot;http://www.amazon.fr/Clean-Code-Handbook-Software-Craftsmanship/dp/0132350882&quot;&gt;&lt;img src=&quot;/img/books/Clean-Code-Robert-Martin.png&quot; alt=&quot;Clean-Code-Robert-Martin&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;refactoring-martin-fowlerhttpwwwamazonfrrefactoring-improving-design-existing-codedp0201485672&quot;&gt;&lt;a href=&quot;http://www.amazon.fr/Refactoring-Improving-Design-Existing-Code/dp/0201485672&quot;&gt;Refactoring. Martin Fowler&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;&lt;a href=&quot;http://www.amazon.fr/Refactoring-Improving-Design-Existing-Code/dp/0201485672&quot;&gt;&lt;img src=&quot;/img/books/Refactoring-Martin-Fowler.png&quot; alt=&quot;Refactoring-Martin-Fowler&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;working-effectively-with-legacy-code-michael-feathershttpwwwamazonfrworking-effectively-legacy-michael-feathersdp0131177052&quot;&gt;&lt;a href=&quot;http://www.amazon.fr/Working-Effectively-Legacy-Michael-Feathers/dp/0131177052&quot;&gt;Working Effectively with Legacy Code. Michael Feathers&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;&lt;a href=&quot;http://www.amazon.fr/Working-Effectively-Legacy-Michael-Feathers/dp/0131177052&quot;&gt;&lt;img src=&quot;/img/books/Working-Effectively-With-Legacy-Code-Michael-Feathers.png&quot; alt=&quot;Working-Effectively-With-Legacy-Code-Michael-Feathers&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;pragmatic-programmer-andrew-hunthttpwwwamazonfrpragmatic-programmer-journeyman-andrew-huntdp020161622x&quot;&gt;&lt;a href=&quot;http://www.amazon.fr/Pragmatic-programmer-journeyman-Andrew-Hunt/dp/020161622X&quot;&gt;Pragmatic Programmer. Andrew Hunt&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;&lt;a href=&quot;http://www.amazon.fr/Pragmatic-programmer-journeyman-Andrew-Hunt/dp/020161622X&quot;&gt;&lt;img src=&quot;/img/books/Pragmatic-Programmer-Andrew-Hunt.png&quot; alt=&quot;Pragmatic-Programmer-Andrew-Hunt&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;code-complete-steven-mcconnelhttpwwwamazonfrcode-complete-steven-c-mcconnelldp0735619670&quot;&gt;&lt;a href=&quot;http://www.amazon.fr/Code-Complete-Steven-C-McConnell/dp/0735619670&quot;&gt;Code Complete. Steven McConnel&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;&lt;a href=&quot;http://www.amazon.fr/Code-Complete-Steven-C-McConnell/dp/0735619670&quot;&gt;&lt;img src=&quot;/img/books/Code-Complete-Steven-MacConnel.png&quot; alt=&quot;Code-Complete-Steven-MacConnel&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;refactoring-databases-scott-amblerhttpwwwamazonfrgpproduct0321774515refaslitftlieutf8amptagwwwgrodziskic-21amplinkcodeas2ampcamp1642ampcreative6746ampcreativeasin0321774515&quot;&gt;&lt;a href=&quot;http://www.amazon.fr/gp/product/0321774515/ref=as_li_tf_tl?ie=UTF8&amp;amp;tag=wwwgrodziskic-21&amp;amp;linkCode=as2&amp;amp;camp=1642&amp;amp;creative=6746&amp;amp;creativeASIN=0321774515&quot;&gt;Refactoring Databases. Scott Ambler&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;&lt;a href=&quot;http://www.amazon.fr/gp/product/0321774515/ref=as_li_tf_tl?ie=UTF8&amp;amp;tag=wwwgrodziskic-21&amp;amp;linkCode=as2&amp;amp;camp=1642&amp;amp;creative=6746&amp;amp;creativeASIN=0321774515&quot;&gt;&lt;img src=&quot;/img/books/Refactoring-Databases-Steven-McConnell.png&quot; alt=&quot;Refactoring-Databases-Steven-McConnell&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h2 id=&quot;a-nameuserinteractionsauser-interactions&quot;&gt;&lt;a name=&quot;user_interactions&quot;&gt;&lt;/a&gt;User Interactions&lt;/h2&gt;
+
+&lt;h3 id=&quot;design-of-everyday-things-donald-normanhttpwwwamazoncomdesign-everyday-things-donald-normandp0465067107&quot;&gt;&lt;a href=&quot;http://www.amazon.com/Design-Everyday-Things-Donald-Norman/dp/0465067107&quot;&gt;Design of Everyday Things. Donald Norman.&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;&lt;a href=&quot;http://www.amazon.com/Design-Everyday-Things-Donald-Norman/dp/0465067107&quot;&gt;&lt;img src=&quot;/img/books/Design-Of-Everyday-Things-Donal-Norman.png&quot; alt=&quot;Design-Of-Everyday-Things-Donal-Norman&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Un des rares ouvrages qui m’a réellement marqué en m’enlevant des oeillères  sur les objets avec lesquels j’interagis au quotidien. Un “must-read”.&lt;/p&gt;
+
+&lt;h3 id=&quot;dont-make-me-think-steve-krughttpwwwamazoncomdont-make-me-think-usabilitydp0321344758refpdbxgybimgz&quot;&gt;&lt;a href=&quot;http://www.amazon.com/Dont-Make-Me-Think-Usability/dp/0321344758/ref=pd_bxgy_b_img_z&quot;&gt;Don’t Make Me Think. Steve Krug&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;&lt;a href=&quot;http://www.amazon.com/Dont-Make-Me-Think-Usability/dp/0321344758/ref=pd_bxgy_b_img_z&quot;&gt;&lt;img src=&quot;/img/books/Dont-Make-Me-Think-Steve-Krug.png&quot; alt=&quot;Dont-Make-Me-Think-Steve-Krug&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Un ouvrage plus pratique et concret que le précédent avec une application directe à la conception de pages web. Un bon complément.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h2 id=&quot;a-nameotherparadigmsfplogicalafunctional-paradigm&quot;&gt;&lt;a name=&quot;other_paradigms_fp_logical_&quot;&gt;&lt;/a&gt;Functional paradigm&lt;/h2&gt;
+
+&lt;p&gt;Le paradigme fonctionnel semble éloigné de la programmation orienté-objet mais en pratique l’approche de la gestion d’état des langages fonctionnels permet une mise en oeuvre très proche du DDD, voir &lt;a href=&quot;http://clojure.org/about/state&quot;&gt;cet article du langage Clojure sur la gestion d’état&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h3 id=&quot;functional-programming-for-the-java-developers-dean-wampler-oreillyhttpwwwamazonfrgpproduct1449311032refaslitftlieutf8amptagwwwgrodziskic-21amplinkcodeas2ampcamp1642ampcreative6746ampcreativeasin1449311032&quot;&gt;&lt;a href=&quot;http://www.amazon.fr/gp/product/1449311032/ref=as_li_tf_tl?ie=UTF8&amp;amp;tag=wwwgrodziskic-21&amp;amp;linkCode=as2&amp;amp;camp=1642&amp;amp;creative=6746&amp;amp;creativeASIN=1449311032&quot;&gt;Functional Programming for the Java Developers. Dean Wampler. O’Reilly’&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;&lt;a href=&quot;http://www.amazon.fr/gp/product/1449311032/ref=as_li_tf_tl?ie=UTF8&amp;amp;tag=wwwgrodziskic-21&amp;amp;linkCode=as2&amp;amp;camp=1642&amp;amp;creative=6746&amp;amp;creativeASIN=1449311032&quot;&gt;&lt;img src=&quot;/img/books/Functional-Programming-For-The-Java-Developers-Dean-Wampler.png&quot; alt=&quot;Functional-Programming-For-The-Java-Developers-Dean-Wampler&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;functional-programming-for-the-object-oriented-programmer-brian-marickhttpsleanpubcomfp-oo&quot;&gt;&lt;a href=&quot;https://leanpub.com/fp-oo&quot;&gt;Functional Programming for the Object-Oriented Programmer. Brian Marick&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;&lt;a href=&quot;https://leanpub.com/fp-oo&quot;&gt;&lt;img src=&quot;/img/books/Functional-Programming-for-the-Object-Oriented-Programmer-Brian-Marick.png&quot; alt=&quot;Functional-Programming-for-the-Object-Oriented-Programmer-Brian-Marick&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;seven-languages-in-seven-weeks-bruce-tate-pragmatic-programmershttpwwwamazonfrgpproduct193435659xrefaslitftlieutf8amptagwwwgrodziskic-21amplinkcodeas2ampcamp1642ampcreative6746ampcreativeasin193435659x&quot;&gt;&lt;a href=&quot;http://www.amazon.fr/gp/product/193435659X/ref=as_li_tf_tl?ie=UTF8&amp;amp;tag=wwwgrodziskic-21&amp;amp;linkCode=as2&amp;amp;camp=1642&amp;amp;creative=6746&amp;amp;creativeASIN=193435659X&quot;&gt;Seven Languages In Seven Weeks. Bruce Tate. Pragmatic Programmers&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;&lt;a href=&quot;http://www.amazon.fr/gp/product/193435659X/ref=as_li_tf_tl?ie=UTF8&amp;amp;tag=wwwgrodziskic-21&amp;amp;linkCode=as2&amp;amp;camp=1642&amp;amp;creative=6746&amp;amp;creativeASIN=193435659X&quot;&gt;&lt;img src=&quot;/img/books/Seven-Languages-In-Seven-Weeks.png&quot; alt=&quot;Seven-Languages-In-Seven-Weeks&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;the-joy-of-clojure-michael-fogus-chris-houser-manning-2nd-edhttpwwwmanningcomfogus2&quot;&gt;&lt;a href=&quot;http://www.manning.com/fogus2/&quot;&gt;The Joy Of Clojure. Michael Fogus, Chris Houser. Manning. 2nd Ed.&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;&lt;a href=&quot;http://www.manning.com/fogus2/&quot;&gt;&lt;img src=&quot;/img/books/Joy-Of-Clojure-2nd-Edition.png&quot; alt=&quot;Joy-Of-Clojure 2nd Edition&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Un “must-read” qui m’a fait découvrir Clojure il y a quelques années, l’aspect introduction et pratique du langage est moins évidente que “Clojure Programming”, il apporte cependant le “pourquoi” de chaque aspect du langage et la philosophie derrière chaque élément.&lt;/p&gt;
+
+&lt;h3 id=&quot;clojure-programming---practical-lisp-for-the-java-worldhttpshoporeillycomproduct0636920013754do&quot;&gt;&lt;a href=&quot;http://shop.oreilly.com/product/0636920013754.do&quot;&gt;Clojure Programming - Practical Lisp for the Java World&lt;/a&gt;&lt;/h3&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://shop.oreilly.com/product/0636920013754.do&quot;&gt;&lt;img src=&quot;/img/books/clojure-programming.png&quot; alt=&quot;Clojure Programming - Practical Lisp for the Java World&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+</description>
+        <pubDate>Thu, 25 Feb 2016 00:00:00 +0100</pubDate>
+        <link>http://domain-driven-design.eu/software-design/2016/02/25/domain-driven-design-bibliography.html</link>
+        <guid isPermaLink="true">http://domain-driven-design.eu/software-design/2016/02/25/domain-driven-design-bibliography.html</guid>
+        
+        <category>domain-driven-design</category>
+        
+        <category>DDD</category>
+        
+        <category>bibliography</category>
+        
+        
+        <category>software-design</category>
+        
+      </item>
+    
+  </channel>
+</rss>

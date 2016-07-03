@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+     <meta charset="utf-8" />
+ <title>Domain Driven Design Value Type</title>
+ <meta name="description" content="Formation Domain-Driven Design Paris France" />
+ <meta name="keywords" content="formation training domain driven design DDD France Paris Français" />
+ <meta name="author" content="Jérémie Grodziski">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+ <!--[if IE]><meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'><![endif]-->
+ <!-- Favicon Icon -->
+ <link href="/img/favicon.ico" rel="shortcut icon" type="image/x-icon"/>
+ <link href="/img/favicon.png" rel="icon" type="image/png"/>
+ <link href="/img/favicon.png" rel="apple-touch-icon"/>
+ <!--link href="/css/style.css" rel="stylesheet" type="text/css" /-->
+ <!--link href="/css/plugin/animate.css" rel="stylesheet" type="text/css" /-->
+ <!--link href="/css/custom.css" rel="stylesheet" type="text/css" /-->
+ <link href="/css/main.css" rel="stylesheet" type="text/css" />
+
+</head>
+
+<body class="full-intro">
+    <!-- Intro Section -->
+    <section class="inner-intro bg-img-books overlay-light parallax parallax-section1">
+        <div class="container">
+            <div class="row title">
+                <h2 class="h2">Domain Driven Design Value Type</h2>
+                <div class="page-breadcrumb">
+                    <a href="/">Accueil</a>/<a href="/blog">Blog</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div class="clearfix"></div>
+    <!-- End Intro Section -->
+    <!-- Blog Post Section -->
+    <section class="ptb ptb-sm-80">
+        <div class="container">
+            <div class="row">
+                <!-- Post Bar -->
+                <div class="col-lg-9 col-md-9 blog-post-hr">
+                    <div class="blog-post mb-30">
+                        <!--<div class="post-header">
+                            <h2><a href="/software-design/2016/04/14/domain-driven-design-value-object.html">Domain Driven Design Value Type</a></h2>
+                        </div>
+                        <div class="post-meta">
+                        	<span>by <a>Jérémie Grodziski</a>,</span>
+                        	<span>14 April 2016</span>
+                        </div>-->
+                        <!--<div class="post-media">
+                            <img alt="" src="/img/full/28.jpg">
+                        </div>-->
+                        <div class="post-entry">
+                            <h1 id="quest-ce-quune-valeur-">Qu’est ce qu’une valeur ?</h1>
+
+<p>Le nombre 42, un montant de 10 Euros, une distance de 3 kilomètres, mon prénom “Jérémie”, la date 14 avril 2016 sont toutes des valeurs.</p>
+
+<blockquote>
+  <p><strong>Une valeur est un concept du domaine qui mesure, quantifie ou décrit quelque chose.</strong></p>
+</blockquote>
+
+<p>Allez une petite définition un peu plus formelle pour la route :</p>
+
+<blockquote>
+  <p><strong>Une valeur est quelque chose d’intangible et d’immutable</strong></p>
+
+  <ul>
+    <li>
+      <p><strong>Intangible</strong> signifie : qui existe en dehors du temps et de l’espace</p>
+    </li>
+    <li>
+      <p><strong>Immutable</strong> signifie : qui ne change pas une fois créée</p>
+    </li>
+  </ul>
+</blockquote>
+
+<p>Intangible, j’avoue c’est un peu rude, prenons donc un exemple : si je vous dit “20 Euros”, vous comprenez le sens de cette valeur quelque soit le lieu où je l’énonce (Paris) et le moment (14 avril 2016). C’est cela être intangible pour une valeur. Dit autrement, <strong>on supprime le <em>temps</em> du paysage de la valeur et cela lui enlève une part importante de complication</strong>. L’immutabilité semble quelque chose d’acquis pour le commun des mortels mais pas pour le programmeur, qui est habitué à voir des variables partout. Même s’il affecte des valeurs à des variables et finit par confondre les deux et à voir des changements partout.</p>
+
+<h1 id="caractristiques-dune-valeur">Caractéristiques d’une valeur</h1>
+
+<h3 id="immutables">Immutables</h3>
+<p>Par définition du mot “valeur”, une valeur ne change pas.</p>
+
+<h3 id="tout-conceptuel">“Tout” conceptuel</h3>
+<p>La valeur a une signification locale, c’est à dire qui est auto-suffisante pour en saisir le sens. La définition de la valeur peut faire intervenir éventuellement des concepts de niveaux d’abstraction plus bas mais leur sens est également auto-suffisant, par exemple une position sur une sphère fait intervenir la notion - de plus bas niveau - d’angle.</p>
+
+<h3 id="galit-forte">Égalité forte</h3>
+
+<p>L’ensemble des attributs d’une valeur permettent d’établir si elle est égale à une autre valeur.Exemple : exemple, un montant de 
+<code class="highlighter-rouge">
+10 Euros {quantité: 10, devise: "EUR"}
+</code>
+est égale à un autre montant de 
+<code class="highlighter-rouge">
+10 Euros {quantité: 10, devise: "EUR"}
+</code>
+mais différentes d’un montant de 
+<code class="highlighter-rouge">
+10 Dollars {quantité: 10, devise: "USD"}
+</code></p>
+
+<h3 id="riches-en-logique-du-domaine-contraintes-comportement">Riches en Logique du domaine (contraintes, comportement)</h3>
+
+<p>C’est là que les value types se distinguent d’une simple structure de données associative. Ils possèdent des contraintes et des comportement lié aux concepts du domaine qu’ils représentent.
+Exemple : 
+Un value type <code class="highlighter-rouge">Montant</code> posséde comme contraintes :</p>
+
+<ul>
+  <li><em>Quantité</em> : strictement positive, un montant négatif de -10 € n’a pas de sens. Précision à deux décimales.</li>
+  <li><em>Code ISO de la devise</em> appartenant à l’ensemble des devises connus (en Java l’objet Currency fournit avec le SDK). Ex : “EUR”, “USD”, “GBP”.
+et comme opérations :</li>
+  <li>ajouter</li>
+  <li>soustraire</li>
+  <li>comparer</li>
+</ul>
+
+<h3 id="combinables-oprateurs-fonctions">Combinables (opérateurs, fonctions)</h3>
+
+<h3 id="auto-validant">Auto-validant</h3>
+
+
+                        </div>                      
+                    </div>
+                    <hr />
+                    <div class="post-author">
+                        <div class="post-author-img pull-left">
+                            <img alt="author" src="/img/JeremieGrodziski-portrait.png">
+                        </div>
+
+                        <div class="post-author-details pull-left">
+                            <h6>Jérémie Grodziski</h6>
+                            <ul class="social">
+                                <li><a href="https://www.twitter.com/jgrodziski" target="_blank"><i class="fa fa-twitter"></i></a></li>
+                                <li><a href="https://github.com/jgrodziski" target="_blank"><i class="fa fa-github"></i></a></li>
+                                <li><a href="https://news.ycombinator.com/user?id=jgrodziski" target="_blank"><i class="fa fa-y-combinator"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <hr />
+                    <div class="clearfix"></div>
+                    <div id="disqus_thread"></div>
+						<script>
+						    var disqus_config = function () {
+						        this.page.url = /software-design/2016/04/14/domain-driven-design-value-object.html;
+						        this.page.identifier = /software-design/2016/04/14/domain-driven-design-value-object;
+						    };
+
+						   (function() {
+								var d = document, s = d.createElement('script');
+
+								s.src = '//ddd-eu.disqus.com/embed.js';
+
+								s.setAttribute('data-timestamp', +new Date());
+								(d.head || d.body).appendChild(s);
+								})();
+						</script>
+						<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+                	</div>
+                <!-- End Post Bar -->
+                <!-- Sidebar -->
+                <div class="col-lg-3 col-md-3 mt-sm-30">
+                    <div class="sidebar-widget">
+                        <h5>Search</h5>
+                        <div class="widget-search">
+                            <input class="form-full input-lg" type="text" value="" placeholder="Search Here" name="search" id="wid-search">
+                            <input type="submit" value="" name="email" id="wid-s-sub">
+                        </div>
+                    </div>
+                    <div class="sidebar-widget">
+                        <h5>Recent</h5>
+                        <hr>
+                        <ul class="widget-post">
+                        	
+                            	<li>
+                                	<div class="widget-post-info">
+                                    	<h6><a href="/software-design/2016/04/14/domain-driven-design-value-object.html">Domain Driven Design Value Type</a></h6>
+                                    	<div class="post-meta"><span>14 April 2016</span></div>
+                                	</div>
+                            	</li>
+                           
+                            	<li>
+                                	<div class="widget-post-info">
+                                    	<h6><a href="/software-design/2016/02/25/domain-driven-design-bibliography.html">Bibliographie Domain Driven Design</a></h6>
+                                    	<div class="post-meta"><span>25 February 2016</span></div>
+                                	</div>
+                            	</li>
+                           
+                        </ul>
+                    </div>
+                    <div class="sidebar-widget">
+                        <h5>Tags</h5>
+                        <hr>
+	                     <a style='font-size: 70%' href='/tag/bibliography'>bibliography</a>
+<a style='font-size: 70%' href='/tag/value object'>value object</a>
+<a style='font-size: 70%' href='/tag/value type'>value type</a>
+<a style='font-size: 170%' href='/tag/DDD'>DDD</a>
+<a style='font-size: 170%' href='/tag/domain-driven-design'>domain-driven-design</a>
+
+                    </div>
+                </div>
+                <!-- End Sidebar -->
+            </div>
+        </div>
+    </section>
+    <!-- End Blog Post Section -->
+     <!-- FOOTER -->
+        <footer class="footer">
+            <div class="footer-container">
+                <div class="column">
+                    <img src="/img/footer-logo.svg"/>
+                </div>
+                <div class="column">
+                    <a href="/#presentation">Présentation</a>
+                    <a href="/#dates">Dates</a>
+                    <!--a href="/#blog">Blog</a-->
+                    <a href="/#team">Organisateurs</a>
+                </div>
+                <div class="column">
+                    <a href="#">Page Meetup</a>
+                    <a href="/download/ident-pack.zip">Logo & Identité</a>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+        </footer>
+        <!-- END FOOTER -->
+
+        <!-- Scroll Top -->
+        <a class="scroll-top ">
+            <i class="fa fa-angle-double-up "></i>
+        </a>
+        <!-- End Scroll Top -->
+
+</body>
+
+</html>
