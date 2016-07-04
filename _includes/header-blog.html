@@ -17,13 +17,10 @@
             <div class="logo">
                 <a href="/"><img class="illu" src="/img/logos/paris-clojure.svg"/><img class="typo" src="/img/logos/paris-clojure-type.svg"/></a>
             </div>
-            <nav>
-                <div class="search-wraper">
-                    <input type="text" class="input-sm form-full" placeholder="Search..." name="search" />
-                    <a class="search-bar-icon"><i class="fa fa-search"></i></a>
-                    <a class="bar-close toggle-menu menu-top push-body"><i class="ion ion-android-close"></i></a>
-                </div>
-            </nav>
+            <div id="search-container" class="search-wraper">
+                <input id="search-input" type="text" placeholder="Search..." name="search" />
+                <ul id="results-container"></ul>
+            </div>
                 <!--End Navigation Menu -->
         </header>
         <!-- END HEADER -->

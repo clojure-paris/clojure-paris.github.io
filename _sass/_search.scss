@@ -1,0 +1,94 @@
+.search-wraper {
+    display: block;
+    position: relative;
+    width: 200px;
+    height: 50px;
+    float: right;
+    margin-right: 55px;
+
+    input {
+        display: block;
+        width: 200px;
+        height: 25px;
+        margin: 10px 0px;
+        border-top: none;
+        border-right: none;
+        border-bottom: solid 2px $borderColor;
+        border-left: none;
+        -webkit-outline: none;
+        font-size: 18px;
+        background-color: white;
+        z-index: 100;
+        font-family: $SexyComme;
+        line-height: 35px;
+
+        &:focus {
+            border-bottom: solid 2px $lightBlue;
+            outline-width: 0;
+        }
+    }
+
+    ul {
+        //display: block;
+        position: absolute;
+        font-size: 18px;
+        font-family: $SexyComme;
+        color: $darkFont;
+        text-indent: 5px;
+        width: 200px;
+        max-height: 300px;
+        overflow-y: scroll;
+        top: 50px;
+        right: 0;
+        margin: 0;
+        background-color: white;
+        z-index: 0;
+        transition: top 0.2s;
+        border-left: solid 1px $borderColor;
+        border-right: solid 1px $borderColor;
+        border-bottom: solid 1px $borderColor;
+
+        &::before {
+            content: "";
+            display: block;
+            position: absolute;
+            width: 0px;
+            height: 0px;
+            top: 0px;
+            left: 97px;
+            border-bottom: solid 6px white;
+            border-left: solid 6px transparent;
+            border-right: solid 6px transparent;
+        }
+
+        li {
+            //display: block;
+            width: 100%;
+            margin: 0;
+            padding: 5px 0;
+
+            &:not(:last-child) {
+                border-bottom: solid 1px $borderColor;
+            }
+
+            a, a:visited {
+                display: block;
+                text-indent: 0;
+                width: 190px;
+                padding: 0px 5px;
+                font-size: 18px;
+                font-family: $SexyComme;
+                color: $darkFont;
+                text-decoration: none;
+
+                &:hover {
+                    color: $lightBlue;
+                }
+
+                &:active {
+                    color: $blue;
+                }
+            }
+        }
+    }
+}
