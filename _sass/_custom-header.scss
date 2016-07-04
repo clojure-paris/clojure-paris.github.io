@@ -95,24 +95,5 @@
                 }
             }
         }
-
-        input {
-            display: block;
-            height: 25px;
-            margin: 10px 0px;
-            border-top: none;
-            border-right: none;
-            border-bottom: solid 2px $borderColor;
-            border-left: none;
-            -webkit-outline: none;
-            font-size: 18px;
-            font-family: $SexyComme;
-            line-height: 35px;
-
-            &:focus {
-                border-bottom: solid 2px $lightBlue;
-                outline-width: 0;
-            }
-        }
     }
 }
