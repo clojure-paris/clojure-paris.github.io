@@ -1,0 +1,106 @@
+.landing-blog-link {
+    display: block;
+    position: relative;
+    margin-right: 15px;
+    float: right;
+    height: 24px;
+    line-height: 22px;
+    font-family: $SexyComme;
+    font-size: 24px;
+    text-decoration: none;
+    color: $darkFont;
+
+    &::after, &::before {
+        content: "";
+        display: block;
+        position: absolute;
+        width: 12px;
+        height: 3px;
+        @include border-radius(10px);
+        background-color: $darkFont;
+        right: -16px;
+    }
+
+    &::after {
+        transform: rotate(-45deg);
+        top: 11px;
+    }
+
+    &::before {
+        transform: rotate(45deg);
+        top: 4px;
+    }
+
+    &:hover {
+        color: $lightBlue;
+
+        &::after, &::before {
+            background-color: $lightBlue;
+        }
+    }
+
+    &:active {
+        color: $blue;
+
+        &::after, &::before {
+            background-color: $blue;
+        }
+    }
+}
+
+.posts-container {
+    width: 100%;
+    margin: 30px 0px 20px;
+}
+
+.landing-blog-post {
+    display: block;
+    float: left;
+    width: 40%;
+
+    &:first-child {
+        margin-right: 20%;
+    }
+
+    .landing-post-title {
+        display: block;
+        width: 100%;
+        margin-top: 20px;
+
+        a {
+            display: block;
+            float: left;
+            width: 100%;
+            font-family: $SexyComme;
+            color: $darkFont;
+            font-size: 27px;
+            text-decoration: none;
+
+            &:hover {
+                color: $lightBlue;
+            }
+
+            &:active {
+                color: $blue;
+            }
+        }
+    }
+
+    .post-meta {
+        display: block;
+        width: 100%;
+        font-family: $textFont;
+        color: $mediumFont;
+        margin: 20px 0px;
+        font-size: 16px;
+        line-height: 20px;
+    }
+
+    .post-date {
+        display: block;
+        width: 100%;
+        margin: 30px 0px 0px;
+        font-family: $MeneStone;
+        font-size: 16px;
+    }
+}

@@ -10,55 +10,64 @@
     {{page.content}}
 
     <!-- Blog Section -->
-        <section id="blog " class="landing-blog wow fadeIn ptb ptb-sm-80 ">
-            <div class="container ">
-                <h2 class="float-left float-none-xs ">Blog</h2>
-                <a class="btn-link-a float-right float-none-xs " href="/blog">Voir Tout</a>
-                <div class="clearfix "></div>
-                <div class="spacer-60 "></div>
-                <div class="row ">
+        <section id="blog" class="content">
+            <div class="line-wrapper">
+                <div class="container ">
+                    <div class="big-text-space"></div>
+                    <h2>Blog</h2>
 
-                {% for post in site.posts limit:3 %}
-                    <div class="col-lg-4 col-md-6 col-sm-6 mb-sm-30 ">
-                        <div class="blog-post ">
-                            <div class="post-header ">
-                                <h5><a href="{{ post.url }}">{{ post.title }}</a></h5>
+                    <div class="posts-container">
+                        {% for post in site.posts limit:2 %}
+                            <div class="landing-blog-post">
+                                <div class="landing-post-title">
+                                    <a href="{{ post.url }}">{{ post.title }}</a>
+                                    <div class="clearfix"></div>
+                                </div>
+                                <div class="post-meta">
+                                    <span>{{ post.excerpt }}</span>
+                                </div>
+                                <div class="post-date">
+                                    <span>{{ post.date | date_to_long_string}}</span>
+                                </div>
                             </div>
-                            <div class="post-meta "><!--<span><a>{{ post.author }}</a>,</span>--><span>{{ post.date | date_to_long_string}}</span></div>
+                        {% endfor %}
+                        <div class="clearfix "></div>
+                    </div>
+
+                    <a class="landing-blog-link" href="/blog">voir tout</a>
+                    <div class="big-text-space"></div>
+                    <div class="clearfix "></div>
+
+                     <!-- Pagination Nav -->
+                    {% if paginator.total_pages > 1 %}
+                        <div class="pagination-nav mt-60 mtb-xs-30">
+                            <ul>
+                                {% if paginator.previous_page %}
+                                  <li><a href="{{ paginator.previous_page_path }}"><i class="fa fa-angle-left"></i></a></li>
+                                {% else %}
+                                  <li><i class="fa fa-angle-left"></i></li>
+                                {% endif %}
+
+                                {% for page in (1..paginator.total_pages) %}
+                                  {% if page == paginator.page %}
+                                    <li class="active"><a>{{ page }}</a></li>
+                                    <em>{{ page }}</em>
+                                  {% elsif page == 1 %}
+                                    <li><a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">{{ page }}</a></li>
+                                  {% else %}
+                                    <li><a href="{{ site.paginate_path | prepend: site.baseurl | replace: '//', '/' | replace: ':num', page }}">{{ page }}</a></li>
+                                  {% endif %}
+                                {% endfor %}
+
+                                {% if paginator.next_page %}
+                                  <li><a href="{{ paginator.next_page_path }}"><i class="fa fa-angle-right"></i></a></li>
+                                {% else %}
+                                  <li><i class="fa fa-angle-right"></i></li>
+                                {% endif %}
+                            </ul>
                         </div>
-                    </div>
-                {% endfor %}
-
-                 <!-- Pagination Nav -->
-                {% if paginator.total_pages > 1 %}
-                    <div class="pagination-nav mt-60 mtb-xs-30">
-                        <ul>
-                            {% if paginator.previous_page %}
-                              <li><a href="{{ paginator.previous_page_path }}"><i class="fa fa-angle-left"></i></a></li>
-                            {% else %}
-                              <li><i class="fa fa-angle-left"></i></li>
-                            {% endif %}
-
-                            {% for page in (1..paginator.total_pages) %}
-                              {% if page == paginator.page %}
-                                <li class="active"><a>{{ page }}</a></li>
-                                <em>{{ page }}</em>
-                              {% elsif page == 1 %}
-                                <li><a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">{{ page }}</a></li>
-                              {% else %}
-                                <li><a href="{{ site.paginate_path | prepend: site.baseurl | replace: '//', '/' | replace: ':num', page }}">{{ page }}</a></li>
-                              {% endif %}
-                            {% endfor %}
-
-                            {% if paginator.next_page %}
-                              <li><a href="{{ paginator.next_page_path }}"><i class="fa fa-angle-right"></i></a></li>
-                            {% else %}
-                              <li><i class="fa fa-angle-right"></i></li>
-                            {% endif %}
-                        </ul>
-                    </div>
-                {% endif %}
-                <!-- End Pagination Nav -->
+                    {% endif %}
+                    <!-- End Pagination Nav -->
 
                 </div>
             </div>
