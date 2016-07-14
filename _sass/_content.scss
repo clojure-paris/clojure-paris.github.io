@@ -63,7 +63,7 @@
         }
     }
 
-    h2 {
+    h1 {
         display: block;
         position: relative;
         width: 100%;
@@ -138,6 +138,12 @@ pre {
 
         .lightGreen {
             color: $lightGreen;
+        }
+
+        a {
+           .lightGreen {
+                color: $lightGreen;
+            }
         }
     }
 }
