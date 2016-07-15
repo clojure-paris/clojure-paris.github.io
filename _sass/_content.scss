@@ -41,18 +41,18 @@
             padding: 30px 0px 60px;
         }
 
-        &::before, &::after {
-            content: "";
-            display: block;
-            position: absolute;
-            width: 20%;
-            top: 0px;
-            bottom: 0px;
-            border-left: solid 1px $borderColor;
-            border-right: solid 1px $borderColor;
-            z-index: -10;
-            opacity: 0.3;
-        }
+        //&::before, &::after {
+        //    content: "";
+        //    display: block;
+        //    position: absolute;
+        //    width: 20%;
+        //    top: 0px;
+        //    bottom: 0px;
+        //    border-left: solid 1px $borderColor;
+        //    border-right: solid 1px $borderColor;
+        //    z-index: -10;
+        //    opacity: 0.3;
+        //}
 
         &::before {
             left: 20%;
