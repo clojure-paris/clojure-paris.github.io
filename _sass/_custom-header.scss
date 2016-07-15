@@ -13,7 +13,7 @@
         display: block;
         position: relative;
         float: left;
-        width: 100px;
+        width: 585px;
         height: 50px;
         margin-left: 60px;
         overflow: hidden;
@@ -31,20 +31,20 @@
         .typo {
             display: block;
             position: absolute;
-            width: 50px;
+            width: 275px;
             height: 50px;
             top: 0;
-            left: -10px;
+            left: 60px;
             z-index: 0;
-            transition: transform 0.3s cubic-bezier(0.6, 0, 1, 0.8);
+            //transition: transform 0.3s cubic-bezier(0.6, 0, 1, 0.8);
         }
 
-        &:hover {
-            .typo {
-                transform: translateX(55px);
-                transition: transform 0.3s cubic-bezier(0, 0.2, 0.4, 1);
-            }
-        }
+        //&:hover {
+        //    .typo {
+        //        transform: translateX(535px);
+        //        transition: transform 0.3s cubic-bezier(0, 0.2, 0.4, 1);
+        //    }
+        //}
     }
 
     nav {
