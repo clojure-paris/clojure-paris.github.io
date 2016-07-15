@@ -44,22 +44,22 @@ layout: landing
             <img class="rellax" data-rellax-speed="8" src="/img/divide.svg"/>
         </div>
         <!-- Date Section -->
-        <section id="dates" class="content clearfix">
+        <section id="dates" class="content clearfix" itemscope itemtype="http://schema.org/Event">
             <div class="line-wrapper clearfix">
                 <div class="container">
                     <div class="big-text-space"></div>
-                    <h1>Prochain Meetup</h1>
+                    <h1 itemprop="name">Prochain Clojure Paris Meetup</h1>
                 </div>
             </div>
             <pre>
                 <code>
     <span class="lightBlue">(</span><span class="blue">def</span> meetup
-        <span class="purple">{</span><span class="lightPurple">:date</span> <span class="lightGreen">“july 29th 2016”</span>
-        <span class="lightPurple">:location</span> <span class="lightGreen">“Arolla - 25 rue du Louvre Paris 1er”</span>
-        <span class="lightPurple">:speaker</span> <span class="lightGreen">“<a href="https://twitter.com/malk_zameth" style="color: #63ddce">Romeu Moura</a>”</span>
-        <span class="lightPurple">:subject</span> <span class="lightGreen">“Property-based Testing with clojure.spec”</span>
-        <span class="lightPurple">:organizers</span> <span class="lightGreen">“Hiram Madelaine”</span>
-                    <span class="lightGreen">“Jérémie Grodziski”</span><span class="purple">}</span><span class="lightBlue">)</span>
+        <span class="purple">{</span><span class="lightPurple">:date</span> <span class="lightGreen" itemprop="startDate" itemtype="http://schema.org/Date" >“july 29th 2016”</span>
+        <span class="lightPurple">:location</span> <span class="lightGreen" itemprop="location" itemscope itemtype="http://schema.org/Place">“Arolla - 25 rue du Louvre Paris 1er”</span>
+        <span class="lightPurple">:speaker</span> <span class="lightGreen" itemprop="performer" itemtype="http://schema.org/Person">“<a href="https://twitter.com/malk_zameth" style="color: #63ddce">Romeu Moura</a>”</span>
+        <span class="lightPurple">:subject</span> <span class="lightGreen" itemprop="description">“Property-based Testing with clojure.spec”</span>
+        <span class="lightPurple">:organizers</span> <span class="lightGreen" itemprop="organizer" itemtype="http://schema.org/Person">“Hiram Madelaine”</span>
+                    <span class="lightGreen" itemprop="organizer" itemtype="http://schema.org/Person">“Jérémie Grodziski”</span><span class="purple">}</span><span class="lightBlue">)</span>
                 </code>
             </pre>
             <div class="container clearfix">
@@ -79,7 +79,7 @@ layout: landing
                         <div class="avatar">
                             <img src="/img/hiram.png"/>
                         </div>
-                        <div class="name">Hiram Madelaine</div>
+                        <div class="name" itemprop="name" itemtype="http://schema.org/Person">Hiram Madelaine</div>
                         <div class="mail">
                             <a href="mailto:hiram.madelaine@gmail.com">hiram.madelaine@gmail.com</a>
                         </div>
@@ -91,12 +91,15 @@ layout: landing
                         <div class="avatar">
                             <img src="/img/jeremie.png"/>
                         </div>
-                        <div class="name">Jérémie Grodziski</div>
+                        <div class="name" itemprop="name" itemtype="http://schema.org/Person">Jérémie Grodziski</div>
                         <div class="mail">
                             <a href="mailto:jeremie@grodziski.com">jeremie@grodziski.com</a>
                         </div>
                         <div class="twitter">
                             <a target="_blank" href="https://twitter.com/jgrodziski">@jgrodziski</a>
+                        </div>
+                        <div class="twitter">
+                            <a target="_blank" href="http://www.grodziski.com">www.grodziski.com</a>
                         </div>
                     </div>
                     <div class="clearfix"></div>
