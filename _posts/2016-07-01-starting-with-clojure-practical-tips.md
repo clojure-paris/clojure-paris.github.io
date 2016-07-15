@@ -173,7 +173,7 @@ In short I constantly move the "end" paren to the right or to the left (I actual
 
 ## Cursive IDE
 
-I've switched to Cursive about one year and a half ago and never look back because of the easiness and user experience it brings along with the Intellij environment. I also switch quite frequently from Java projects to Clojure ones or even mix the two languages in the same project, so Intellij is a very practical decision.
+I've switched to [Cursive](https://cursive-ide.com) about one year and a half ago and never look back because of the easiness and user experience it brings along with the Intellij environment. I also switch quite frequently from Java projects to Clojure ones or even mix the two languages in the same project, so Intellij is a very practical decision.
 
 
 ## The outsiders
@@ -186,7 +186,7 @@ The community is quite active in the IDE field. Here are some other options you 
 * [Eclipse's plugin CounterClockwise](https://code.google.com/p/counterclockwise/)
 * [Intellij's plugin LAClojure](https://github.com/JetBrains/la-clojure), the very last plugin for IntelliJ is [Cursive](http://cursiveclojure.com/).
 
-Being an occasional Sublime Text user and a [Light table backer](http://www.kickstarter.com/profile/1546229289), I don't have an opinion about these environments. I'm quite happy with my emacs choice for the moment and should stick with it in the short term.
+Being an occasional Sublime Text user and a [Light table backer](http://www.kickstarter.com/profile/1546229289), I don't have an opinion about these environments. I'm quite happy with my Cursive choice for the moment and should stick with it in the short term.
 
 # Conclusion
 This post should give you a good overview of the resources to [get started](http://clojure.org/getting_started) with [Clojure](http://clojure.org/) and what it's like to install and use a Clojure development environment.
