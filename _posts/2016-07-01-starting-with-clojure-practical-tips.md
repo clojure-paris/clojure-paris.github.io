@@ -5,7 +5,7 @@ author: Jérémie Grodziski
 permalink: /starting-with-clojure-practical-tips
 tags: [clojure,introduction,emacs,vi]
 ---
-In this article, I share my experience of developing with [Clojure](http://clojure.org/) over the last months. I focus on the practical tips that will allow you to start seamlessly on Mac Os X (but should apply with Linux and Windows).
+In this article, I share my experience of developing with [Clojure](http://clojure.org/) over the last years. I focus on the practical tips that will allow you to start seamlessly on Mac Os X (but should apply with Linux and Windows).
 
 ![Clojure logo](/img/clojure-logo.png)
 
@@ -15,7 +15,8 @@ When learning Clojure, first of all: have great resources to rely on and not get
 
 ## Books 
 
-If you begins with functional programming I suggest you to start with [Clojure Programming from Christophe Grand, O'Reilly](http://shop.oreilly.com/product/0636920013754.do), once more experienced you can follow with the amazing [Joy of clojure](http://www.manning.com/fogus/) for hindsightful thoughts about programming applied with clojure ([a 2nd edition is out](http://www.manning.com/fogus2/)). For those of you that prefer a more "example oriented" approach, have a look at the nice [Clojure Cookbook](http://clojure-cookbook.com/). If you have a Java/OO background I suggest you to read [Functional Programming for the Java Developer](http://shop.oreilly.com/product/0636920021667.do) and [Functional Programming for the Object Oriented Programmer](https://leanpub.com/fp-oo). Of course, the bible, for more fundamental stuffs: [Structure and Interpretation of Computer Programs](http://mitpress.mit.edu/sicp/) (A good [PDF](https://github.com/sarabander/sicp-pdf) and [EPUB version](https://github.com/sarabander/sicp) are available).
+If you begins with functional programming I suggest you to start with [Clojure Programming from Christophe Grand, O'Reilly](http://shop.oreilly.com/product/0636920013754.do), once more experienced you can follow with the amazing [Joy of clojure](http://www.manning.com/fogus/) for hindsightful thoughts about programming applied with clojure ([a 2nd edition is out](http://www.manning.com/fogus2/)). The recent [Clojure Applied](https://pragprog.com/book/vmclojeco/clojure-applied) by Alex Miller is great to navigate into the Clojure landscape (by the way have a look at clojure.spec that aims to same requirement than the Schema library).
+For those of you that prefer a more "example oriented" approach, have a look at the nice [Clojure Cookbook](http://clojure-cookbook.com/). If you have a Java/OO background I suggest you to read [Functional Programming for the Java Developer](http://shop.oreilly.com/product/0636920021667.do) and [Functional Programming for the Object Oriented Programmer](https://leanpub.com/fp-oo). Of course, the bible, for more fundamental stuffs: [Structure and Interpretation of Computer Programs](http://mitpress.mit.edu/sicp/) (A good [PDF](https://github.com/sarabander/sicp-pdf) and [EPUB version](https://github.com/sarabander/sicp) are available).
 
 ## Cheatsheet and documentation
 I tend to have a [Clojure Cheatsheet](http://clojure.org/cheatsheet) and a browser always opened on [clojuredocs.org](http://www.clojuredocs.org). I cloned the [clojuredocs repo](https://github.com/zkim/clojuredocs) so I always access the [clojuredocs](http://www.clojuredocs.org) on my Mac even when I'm offline. You can also access clojuredocs directly from the REPL with [clojuredocs-client](https://github.com/dakrone/clojuredocs-client). You should also have a look at the [Clojure Style Guide](https://github.com/bbatsov/clojure-style-guide).
