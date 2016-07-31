@@ -14,5 +14,5 @@ markdown: kramdown
 
 paginate: 3
 paginate_path: "/blog/:num"
-gems: [jekyll-paginate]
+gems: [jekyll-paginate, jekyll-youtube]
 
