@@ -1,3 +1,10 @@
+.content {
+    .blog-container {
+        @extend .container;
+        padding: 30px 15px 15px 30px;
+    }
+}
+
 .intro-blog-cover {
     display: block;
     width: 100%;
@@ -218,21 +225,33 @@
     display: block;
     position: relative;
     width: 100%;
-    font-family: $textFont;
+    font-family: $Gentium;
     color: $mediumFont !important;
-    font-size: 20px;
+    font-size: 22px;
+
+    h1 {
+        font-size: 44px;
+        margin: 45px auto 15px;
+    }
+
+    h1:after {
+        content:none;
+    }
+
+    h1:before {
+        content:none;
+    }
 
     h2 {
         display: block;
         position: relative;
         width: 100%;
-        margin: 50px auto 20px;
+        margin: 60px auto 15px;
         //height: 37px;
         //line-height: 54px;
         font-family: $SexyComme;
         font-size: 30px;
         color: $darkFont;
-        text-indent: -2px;
 
 
         //&::before, &::after {
@@ -264,13 +283,14 @@
     h3 {
         display: block;
         font-size: 100%;
-        //color: $darkFont;
+        font-family: $SexyComme;
+        color: $darkFont;
         font-weight: bold;
-        margin: 35px 0px 5px;
+        margin: 35px 0px 10px;
     }
 
     p {
-        line-height: 30px;
+        line-height: 28px;
     }
 
     ul {
@@ -338,6 +358,10 @@
             background-color: $lightBlue;
             opacity: 0.1;
         }
+    }
+
+    pre {
+        padding: 0px;
     }
 }
 
