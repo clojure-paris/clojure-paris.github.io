@@ -23,8 +23,8 @@ layout: blog
                                     <span><a>{{tag}}</a></span>
                                 {% endfor %}
                             </div-->
-                            <div class="post-meta"><span>by <a>{{ post.author }}</a>,</span> <span>{{ post.date | date_to_long_string}}</span></div>
-                            <a class="post-more-link" href="{{ post.url }}">Plus<i class="fa fa-long-arrow-right right"></i></a>
+                            <div class="post-meta"><span>by <a href="{{ post.author-url }}">{{ post.author }}</a>,</span> <span>{{ post.date | date_to_long_string}}</span></div>
+                            <a class="post-more-link" href="{{ post.url }}">More...<i class="fa fa-long-arrow-right right"></i></a>
                             <div class="text-space"></div>
                         </div>
 

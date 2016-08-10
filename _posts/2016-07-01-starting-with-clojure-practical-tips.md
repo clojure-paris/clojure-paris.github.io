@@ -2,6 +2,7 @@
 layout: blog-single
 title: "Practical Starter Tips for Clojure"
 author: Jérémie Grodziski
+author-url: http://www.grodziski.com
 permalink: /starting-with-clojure-practical-tips
 tags: [clojure,introduction,emacs,vi]
 ---

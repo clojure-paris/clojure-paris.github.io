@@ -1,11 +1,9 @@
-title: Paris Clojure Meetup 
+title: Paris Clojure Meetup
 email: jeremie@grodziski.com
 description: > # this means to ignore newlines until "baseurl:"
-  Write an awesome description for your new site here. You can edit this
-  line in _config.yml. It will appear in your document head meta (for
-  Google search results) and in your feed.xml site description.
+  Clojure Paris Meetup
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "http://domain-driven-design.eu"
+url: "http://clojure.paris"
 twitter_username: jgrodziski
 github_username:  jgrodziski
 
@@ -15,4 +13,3 @@ markdown: kramdown
 paginate: 3
 paginate_path: "/blog/:num"
 gems: [jekyll-paginate, jekyll-youtube]
-

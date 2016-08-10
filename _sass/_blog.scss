@@ -15,7 +15,7 @@
     img {
         display: block;
         width: 90%;
-        max-width: 600px;
+        max-width: 800px;
         margin: 0px auto;
     }
 
@@ -27,7 +27,7 @@
     .post-single-title {
         display: block;
         width: 90%;
-        max-width: 600px;
+        max-width: 800px;
         margin: 0px auto 10px;
         font-family: $MeneStone;
         color: $lightGreen;
@@ -226,8 +226,10 @@
     position: relative;
     width: 100%;
     font-family: $Gentium;
+    font-weight: normal;
+    font-style: normal;
     color: $mediumFont !important;
-    font-size: 22px;
+    font-size: 21px;
 
     h1 {
         font-size: 44px;
@@ -291,6 +293,17 @@
 
     p {
         line-height: 28px;
+        strong {
+            font-family: "GentiumBold";
+            font-weight: 700;
+            font-style: normal;
+        }
+
+        em {
+            font-family: "GentiumItalic";
+            font-weight: normal;
+            font-style: italic;
+        }
     }
 
     ul {
@@ -303,15 +316,22 @@
         }
     }
 
-    a, a:visited {
+    a {
         color: $mediumFont;
+        // the following was stolen from medium stylesheet to get a thinner underline for anchor
+        text-decoration: none;
+        background-image: linear-gradient(to bottom,rgba(0,0,0,0) 50%,rgba(0,0,0,.6) 50%);
+        background-repeat: repeat-x;
+        background-size: 2px .1em;
+        background-position: 0 1.05em;
 
         &:hover {
             color: $lightBlue;
+            background-image: linear-gradient(to bottom, $lightBlueRGBA0 50%, $lightBlueRGBA06 50%);
         }
 
-        &:active {
-            color: $blue;
+        &:visited {
+            background-image: linear-gradient(to bottom,rgba(75, 109, 215, 0) 50%,rgba(75, 109, 215, .6) 50%);
         }
     }
 
