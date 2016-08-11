@@ -9,11 +9,11 @@ Darkula color scheme from the JetBrains family of IDEs
   display: block;
   overflow-x: auto;
   padding: 0.5em;
-  background: #2b2b2b;
+  background: #171927;
 }
 
 .hljs {
-  color: #bababa;
+  color: #ffffff;
 }
 
 .hljs-strong,
@@ -27,7 +27,7 @@ Darkula color scheme from the JetBrains family of IDEs
 .hljs-number,
 .hljs-regexp,
 .hljs-literal {
-  color: #6896ba;
+  color: #63ddce;
 }
 
 .hljs-code,
@@ -45,7 +45,7 @@ Darkula color scheme from the JetBrains family of IDEs
 .hljs-attribute,
 .hljs-name,
 .hljs-variable {
-  color: #cb7832;
+  color: #45ad97;
 }
 
 .hljs-params {
@@ -57,14 +57,17 @@ Darkula color scheme from the JetBrains family of IDEs
 .hljs-type,
 .hljs-built_in,
 .hljs-builtin-name,
-.hljs-symbol,
 .hljs-selector-id,
 .hljs-selector-attr,
 .hljs-selector-pseudo,
 .hljs-template-tag,
 .hljs-template-variable,
 .hljs-addition {
-  color: #e0c46c;
+  color: #4b6dd7;
+}
+
+.hljs-symbol {
+    color: #a6a9ff;
 }
 
 .hljs-comment,

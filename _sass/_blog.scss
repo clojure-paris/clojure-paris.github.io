@@ -1,7 +1,7 @@
 .content {
     .blog-container {
         @extend .container;
-        padding: 30px 15px 15px 30px;
+        padding: 30px 0px;
     }
 }
 
@@ -29,7 +29,7 @@
         width: 90%;
         max-width: 800px;
         margin: 0px auto 10px;
-        font-family: $MeneStone;
+        font-family: $SexyComme;
         color: $lightGreen;
         text-align: center;
         font-size: 40px;
@@ -66,6 +66,38 @@
     .post-header {
         margin: 20px 0 20px;
 
+        h1 {
+            display: block;
+            position: relative;
+            width: 100%;
+            margin: 0px auto;
+            //height: 37px;
+            //line-height: 54px;
+            font-family: $SexyComme;
+            font-size: 40px;
+            color: $darkFont;
+            text-indent: -4px;
+
+            &::before, &::after {
+                content: "";
+                display: block;
+                position: absolute;
+                height: 1px;
+                width: 80000px;
+                left: -5000px;
+                background-color: $borderColor;
+                z-index: -10;
+            }
+
+            &::before {
+                top: 3px;
+            }
+
+            &::after {
+                bottom: 16px;
+            }
+        }
+
         a {
             width: 100%;
             text-decoration: none;
@@ -95,32 +127,58 @@
 
     .post-meta {
         display: block;
+        position: relative;
         width: 100%;
-        font-family: $MeneStone;
-        font-size: 18px;
-        margin: 40px 0 35px;
-        color: $darkFont;
+        font-family: $SexyComme;
+        font-size: 20px;
+        margin: 40px 0px !important;
+        color: $mediumFont;
 
         span {
             display: inline-block;
+            float: left;
+
+            a, a:visited {
+                color: $mediumFont;
+
+                &:hover {
+                    color: $lightBlue;
+                }
+
+                &:active {
+                    color: $blue;
+                }
+            }
         }
     }
 
     .post-entry {
         display: block;
         width: 100%;
-        font-family: $textFont;
-        font-size: 18px;
-        line-height: 24px;
+        font-family: $base-text-font;
+        font-size: 22px;
+        line-height: 28px;
         margin: 25px 0 20px;
         color: $mediumFont;
+
+        a, a:visited {
+            color: $mediumFont;
+
+            &:hover {
+                color: $lightBlue;
+            }
+
+            &:active {
+                color: $blue;
+            }
+        }
     }
 
     .post-tag {
         display: block;
         width: 100%;
         margin: 20px 0 40px;
-        font-family: $textFont;
+        font-family: $base-text-font;
         font-size: 18px;
         color: $mediumFont;
 
@@ -157,7 +215,7 @@
         height: 24px;
         line-height: 22px;
         font-family: $SexyComme;
-        font-size: 24px;
+        font-size: 22px;
         text-decoration: none;
         color: $darkFont;
 
@@ -233,15 +291,16 @@
 
     h1 {
         font-size: 44px;
-        margin: 45px auto 15px;
-    }
+        margin: 45px auto 25px;
+        text-indent: -4px;
 
-    h1:after {
-        content:none;
-    }
+        &::after {
+            bottom: 18px;
+        }
 
-    h1:before {
-        content:none;
+        &::before {
+            top: 3px;
+        }
     }
 
     h2 {
@@ -249,33 +308,9 @@
         position: relative;
         width: 100%;
         margin: 60px auto 15px;
-        //height: 37px;
-        //line-height: 54px;
         font-family: $SexyComme;
         font-size: 30px;
         color: $darkFont;
-
-
-        //&::before, &::after {
-        //    content: "";
-        //    display: block;
-        //    position: absolute;
-        //    height: 1px;
-        //    width: 80000px;
-        //    left: -5000px;
-        //    background-color: $borderColor;
-        //    z-index: -10;
-        //    opacity: 0.5;
-        //}
-
-
-        &::before {
-            top: 2px;
-        }
-
-        &::after {
-            bottom: 11px;
-        }
 
         & + h3 {
             margin: 20px 0px 5px;
@@ -415,10 +450,22 @@
 
 
     h6 {
-        display: inline;
-        font-family: $SexyComme;
-        color: $darkFont;
-        font-size: 27px;
+
+        a, a:visited {
+            display: inline;
+            font-family: $SexyComme;
+            color: $darkFont;
+            font-size: 27px;
+            text-decoration: none;
+
+            &:hover {
+                color: $lightBlue
+            }
+
+            &:active {
+                color: $blue;
+            }
+        }
     }
 
     .social {

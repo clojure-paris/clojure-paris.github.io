@@ -33,11 +33,13 @@
             }
 
             a {
-                display: block;
-                width: 100%;
+                display: inline-block;
+                //width: 100%;
                 font-family: $SexyComme;
                 color: $lightFont;
                 text-align: right;
+                float: right;
+                clear: both;
                 height: 40px;
                 line-height: 40px;
                 text-decoration: none;
