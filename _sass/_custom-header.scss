@@ -13,38 +13,16 @@
         display: block;
         position: relative;
         float: left;
-        width: 585px;
+        width: 500px;
         height: 50px;
         margin-left: 60px;
         overflow: hidden;
 
         .illu {
             display: block;
-            position: absolute;
-            width: 50px;
+            float: left;
             height: 50px;
-            top: 0;
-            left: 0;
-            z-index: 10;
         }
-
-        .typo {
-            display: block;
-            position: absolute;
-            width: 275px;
-            height: 50px;
-            top: 0;
-            left: 60px;
-            z-index: 0;
-            //transition: transform 0.3s cubic-bezier(0.6, 0, 1, 0.8);
-        }
-
-        //&:hover {
-        //    .typo {
-        //        transform: translateX(535px);
-        //        transition: transform 0.3s cubic-bezier(0, 0.2, 0.4, 1);
-        //    }
-        //}
     }
 
     nav {
