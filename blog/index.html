@@ -24,7 +24,7 @@ layout: blog
                                 {% endfor %}
                             </div-->
                             <div class="post-meta">
-                                <span>by <a href="{{ post.author-url }}">{{ post.author }}</a>,</span> <span>{{ post.date | date_to_long_string}}</span>
+                                <span>by <a href="{{ post.author-url }}">{{ post.author }}</a>,</span><span> {{ post.date | date_to_long_string}}</span>
                                 <a class="post-more-link" href="{{ post.url }}">More...<i class="fa fa-long-arrow-right right"></i></a>
                             </div>
                             <div class="big-text-space"></div>
